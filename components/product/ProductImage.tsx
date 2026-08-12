@@ -1,0 +1,63 @@
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { PRODUCT_IMAGES } from "@/lib/product-images";
+
+export function ProductImage({
+  className,
+  label,
+  showBadge,
+  variant = "hero",
+}: {
+  className?: string;
+  label?: string;
+  showBadge?: boolean;
+  variant?: "hero" | "packaging" | "lifestyle" | "ingredients";
+}) {
+  const src =
+    variant === "packaging"
+      ? PRODUCT_IMAGES.packaging
+      : variant === "lifestyle"
+        ? PRODUCT_IMAGES.heroMain
+        : variant === "ingredients"
+          ? PRODUCT_IMAGES.ingredientsFlatlay
+          : PRODUCT_IMAGES.heroMain;
+
+  const isPackshot = variant === "packaging";
+  const objectPosition =
+    variant === "hero" || variant === "lifestyle" ? "left center" : "center";
+
+  return (
+    <div
+      className={cn(
+        "relative overflow-hidden",
+        isPackshot ? "bg-white" : "bg-brand-cream",
+        className
+      )}
+    >
+      <Image
+        src={src}
+        alt="نور الشيب — بخاخ عشبي ضد الرمادي 100مل"
+        fill
+        sizes="(max-width: 768px) 100vw, 33vw"
+        className={isPackshot ? "object-contain" : "object-cover"}
+        style={{ objectPosition }}
+      />
+      {showBadge && (
+        <div className="absolute bottom-4 left-4 bg-white rounded-xl shadow-premium px-3 py-2 flex items-center gap-2 border border-brand-cream-dark">
+          <div className="w-8 h-8 rounded-full bg-brand-plum flex items-center justify-center text-brand-gold text-xs font-bold">
+            ✓
+          </div>
+          <div className="text-right">
+            <p className="text-[10px] font-english font-semibold text-brand-plum">SFDA Licensed</p>
+            <p className="text-[9px] text-[#6B6B6B]">مسجّل · معتمد</p>
+          </div>
+        </div>
+      )}
+      {label && (
+        <span className="absolute top-3 right-3 text-[10px] bg-brand-plum text-white px-2 py-1 rounded-full font-bold">
+          {label}
+        </span>
+      )}
+    </div>
+  );
+}
