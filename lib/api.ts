@@ -41,7 +41,11 @@ export interface OrderDetail {
   created_at: string;
 }
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_URL ||
+  (process.env.NODE_ENV === "production"
+    ? "https://nurdakhil-backend.acr7ld.easypanel.host"
+    : "http://localhost:8000");
 
 export async function submitOrder(payload: OrderPayload): Promise<OrderResponse> {
   const res = await fetch(`${API_BASE}/api/v1/orders`, {
