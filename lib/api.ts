@@ -55,6 +55,22 @@ export async function submitOrder(payload: OrderPayload): Promise<OrderResponse>
   });
   if (!res.ok) {
     const text = await res.text();
+    try {
+      const parsed = JSON.parse(text) as { detail?: string | { message?: string } };
+      const detail = parsed.detail;
+      if (typeof detail === "string" && detail.trim()) {
+        throw new Error(detail);
+      }
+      if (detail && typeof detail === "object" && detail.message) {
+        throw new Error(detail.message);
+      }
+    } catch (err) {
+      if (err instanceof SyntaxError) {
+        /* not JSON */
+      } else if (err instanceof Error) {
+        throw err;
+      }
+    }
     throw new Error(text || "فشل إرسال الطلب");
   }
   return res.json();
