@@ -55,7 +55,7 @@ export function CartDrawer() {
                 <div key={item.slug} className="flex gap-3 pb-4 border-b border-brand-cream-dark">
                   <div className="relative w-14 h-14 rounded-lg shrink-0 border border-brand-cream-dark overflow-hidden bg-brand-cream">
                     <Image
-                      src={PRODUCT_IMAGES.packaging}
+                      src={PRODUCT_IMAGES.packShot}
                       alt={item.nameAr}
                       fill
                       className="object-contain"

@@ -82,31 +82,14 @@ export default function HomePage() {
             title="صيدلية شعر، لا متجر تجميل عشوائي"
             subtitle="نورالداخل مبنية على أربعة أركان: الترخيص، الحلال، التركيبة السريرية، وراحة العميلة السعودية."
           />
-          <div className="relative mb-10">
+          <div className="relative mb-10 max-w-md mx-auto">
             <StoreImage
-              src={PRODUCT_IMAGES.heroMain}
-              alt="نور الشيب — تركيبة عشبية مرخّصة"
-              aspect="wide"
-              objectFit="cover"
-              objectPosition="left center"
+              src={PRODUCT_IMAGES.packShot}
+              alt="نور الشيب — العلبة والبخاخ الأصلية"
+              aspect="square"
+              objectFit="contain"
+              className="bg-white"
             />
-            {/* Overlay pillars on the empty cream side of the image */}
-            <div className="hidden md:flex absolute inset-y-0 right-0 w-1/2 flex-col justify-center gap-3 pr-10 lg:pr-16">
-              <p className="text-xs font-english tracking-[0.2em] text-brand-gold uppercase">
-                The Nurdakhil Standard
-              </p>
-              <h3 className="text-2xl font-extrabold text-brand-plum leading-snug">
-                تركيبة واحدة — أربعة أركان ثقة
-              </h3>
-              <ul className="space-y-2 mt-1">
-                {["مرخّص SFDA رسمياً", "حلال 100% · نباتي", "جرعات سريرية موثّقة", "ضمان 30 يوم · دفع عند الاستلام"].map((line) => (
-                  <li key={line} className="flex items-center gap-2 text-sm text-brand-plum font-medium">
-                    <span className="w-5 h-5 rounded-full bg-brand-plum text-brand-gold flex items-center justify-center text-[10px] font-bold shrink-0">✓</span>
-                    {line}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {WHY_ITEMS.map((item) => (

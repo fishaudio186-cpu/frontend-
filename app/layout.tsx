@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "نورالداخل | nurdakhil",
     description: "نور الشيب — بخاخ عشبي مرخّص SFDA ضد الرمادي",
-    images: [{ url: "/product/hero-main.png", width: 1200, height: 630, alt: "نور الشيب" }],
+    images: [{ url: "/product/pack-shot.png", width: 1200, height: 630, alt: "نور الشيب — العلبة والبخاخ" }],
   },
 };
 

@@ -14,17 +14,11 @@ export function ProductImage({
   variant?: "hero" | "packaging" | "lifestyle" | "ingredients";
 }) {
   const src =
-    variant === "packaging"
-      ? PRODUCT_IMAGES.packaging
-      : variant === "lifestyle"
-        ? PRODUCT_IMAGES.heroMain
-        : variant === "ingredients"
-          ? PRODUCT_IMAGES.ingredientsFlatlay
-          : PRODUCT_IMAGES.heroMain;
+    variant === "ingredients"
+      ? PRODUCT_IMAGES.ingredientsFlatlay
+      : PRODUCT_IMAGES.packShot;
 
-  const isPackshot = variant === "packaging";
-  const objectPosition =
-    variant === "hero" || variant === "lifestyle" ? "left center" : "center";
+  const isPackshot = variant !== "ingredients";
 
   return (
     <div
@@ -39,8 +33,7 @@ export function ProductImage({
         alt="نور الشيب — بخاخ عشبي ضد الرمادي 100مل"
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
-        className={isPackshot ? "object-contain" : "object-cover"}
-        style={{ objectPosition }}
+        className={isPackshot ? "object-contain p-4" : "object-cover"}
       />
       {showBadge && (
         <div className="absolute bottom-4 left-4 bg-white rounded-xl shadow-premium px-3 py-2 flex items-center gap-2 border border-brand-cream-dark">

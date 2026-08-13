@@ -1,17 +1,17 @@
 import Image from "next/image";
 import { PRODUCT_IMAGES } from "@/lib/product-images";
 
-/** Wide cinematic hero — product left, cream space right for RTL copy */
+/** Branded pack shot — box + bottle, full product visible */
 export function HeroShowcase() {
   return (
-    <div className="relative w-full rounded-3xl overflow-hidden border border-brand-cream-dark shadow-premium aspect-[4/3] md:aspect-[16/10] max-h-[520px] bg-brand-cream">
+    <div className="relative w-full rounded-3xl overflow-hidden border border-brand-cream-dark shadow-premium aspect-square max-h-[520px] bg-white">
       <Image
-        src={PRODUCT_IMAGES.homeBanner}
-        alt="نور الشيب — بخاخ عشبي ضد الرمادي"
+        src={PRODUCT_IMAGES.packShot}
+        alt="نور الشيب — العلبة والبخاخ الأصلية 100مل"
         fill
         priority
         sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover object-left"
+        className="object-contain p-6 md:p-10"
       />
     </div>
   );

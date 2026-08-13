@@ -24,7 +24,7 @@ export function FeaturedProduct() {
           <div className="grid md:grid-cols-2 gap-0">
             <div className="relative bg-white aspect-square md:aspect-auto md:min-h-[420px]">
               <Image
-                src={PRODUCT_IMAGES.packaging}
+                src={PRODUCT_IMAGES.packShot}
                 alt={product.nameAr}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
