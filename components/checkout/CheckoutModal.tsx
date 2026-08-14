@@ -53,16 +53,16 @@ export function CheckoutModal({
   return (
     <Modal open={isCheckoutOpen} onClose={closeCheckout}>
       <div className="pt-8">
-        <h2 className="text-xl font-extrabold text-brand-plum mb-1">
+        <h2 className="text-xl font-extrabold text-brand-forest mb-1">
           أكّدي طلبك · دفع عند الاستلام
         </h2>
-        <p className="text-sm text-[#6B6B6B] mb-3">
+        <p className="text-sm text-brand-ink/60 mb-3">
           بدون دفع أونلاين — نتواصل معك للتأكيد قبل الشحن
         </p>
         <StarRating rating={hero.rating} count={hero.reviewCount} className="mb-4" />
 
         <div className="bg-brand-cream rounded-xl p-4 mb-4 text-sm space-y-1 border border-brand-cream-dark">
-          <p className="font-bold mb-2 text-brand-plum">ملخص الطلب</p>
+          <p className="font-bold mb-2 text-brand-forest">ملخص الطلب</p>
           {items.map((item) => (
             <div key={item.slug} className="flex justify-between">
               <span>
@@ -73,7 +73,7 @@ export function CheckoutModal({
           ))}
           <div className="flex justify-between font-extrabold text-lg pt-2 border-t mt-2">
             <span>الإجمالي (دفع عند الاستلام)</span>
-            <span className="text-brand-plum">{total} ريال</span>
+            <span className="text-brand-berry">{total} ريال</span>
           </div>
         </div>
 
@@ -86,7 +86,7 @@ export function CheckoutModal({
           ].map(({ icon: Icon, t }) => (
             <div key={t} className="flex items-center gap-1.5 bg-white border rounded-lg px-2 py-2">
               <Icon className="w-3.5 h-3.5 text-brand-gold shrink-0" />
-              <span className="text-brand-plum font-medium">{t}</span>
+              <span className="text-brand-forest font-medium">{t}</span>
             </div>
           ))}
         </div>
@@ -97,7 +97,7 @@ export function CheckoutModal({
             <input
               {...register("customer_name")}
               placeholder="مثال: لمى الفهد"
-              className="w-full border rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-brand-plum/30"
+              className="w-full border rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-brand-forest/30"
               dir="rtl"
             />
             {errors.customer_name && (
@@ -111,10 +111,10 @@ export function CheckoutModal({
               {...register("customer_phone")}
               placeholder="0512345678"
               type="tel"
-              className="w-full border rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-brand-plum/30"
+              className="w-full border rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-brand-forest/30"
               dir="ltr"
             />
-            <p className="text-xs text-[#6B6B6B] mt-1">
+            <p className="text-xs text-brand-ink/60 mt-1">
               مثال: 0512345678 — نتصل على هذا الرقم لتأكيد طلبك
             </p>
             {errors.customer_phone && (
@@ -122,13 +122,13 @@ export function CheckoutModal({
             )}
           </div>
 
-          <Button type="submit" fullWidth disabled={submitting} className="bg-brand-plum hover:bg-brand-plum-light text-lg">
+          <Button type="submit" fullWidth disabled={submitting} className="bg-brand-forest hover:bg-brand-forest-light text-lg">
             أكّدي — {total} ريال · دفع عند الاستلام
           </Button>
         </form>
 
         <TrustBadges className="mt-4 justify-center" />
-        <div className="mt-4 p-3 rounded-xl bg-brand-plum/5 text-xs text-center text-[#5A5A5A] leading-relaxed">
+        <div className="mt-4 p-3 rounded-xl bg-brand-forest/5 text-xs text-center text-brand-ink/65 leading-relaxed">
           ✓ نتواصل معك خلال 24 ساعة لتأكيد الطلب
           <br />
           ✓ لا نشحن إلا بعد التأكيد — لضمان وصول طلبك

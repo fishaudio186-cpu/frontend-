@@ -50,10 +50,10 @@ export default function ProductPage({
       {/* Hero buy box */}
       <section className="atmosphere border-b border-brand-cream-dark">
         <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
-          <nav className="text-sm text-[#6B6B6B] mb-6">
-            <Link href="/" className="hover:text-brand-plum">الرئيسية</Link>
+          <nav className="text-sm text-brand-ink/60 mb-6">
+            <Link href="/" className="hover:text-brand-forest">الرئيسية</Link>
             {" / "}
-            <span className="text-brand-plum font-medium">{product.nameAr}</span>
+            <span className="text-brand-forest font-medium">{product.nameAr}</span>
           </nav>
 
           {/* Trust strip */}
@@ -66,7 +66,7 @@ export default function ProductPage({
             ].map(({ icon: Icon, t }) => (
               <span
                 key={t}
-                className="inline-flex items-center gap-1.5 text-xs bg-white border border-brand-cream-dark px-3 py-1.5 rounded-full text-brand-plum font-medium shadow-sm"
+                className="inline-flex items-center gap-1.5 text-xs bg-white border border-brand-cream-dark px-3 py-1.5 rounded-full text-brand-forest font-medium shadow-sm"
               >
                 <Icon className="w-3.5 h-3.5 text-brand-gold" />
                 {t}
@@ -86,7 +86,7 @@ export default function ProductPage({
                   aspect="square"
                   objectFit={gallery[galleryIdx].fit ?? "cover"}
                   objectPosition={gallery[galleryIdx].objectPosition ?? "center"}
-                  className="rounded-3xl shadow-premium hero-plate border border-brand-plum/8"
+                  className="rounded-3xl shadow-premium hero-plate border border-brand-forest/8"
                   priority
                 />
                 {product.badge && (
@@ -95,12 +95,12 @@ export default function ProductPage({
                   </span>
                 )}
                 <div className="absolute bottom-4 left-4 bg-white rounded-xl shadow-premium px-3 py-2 flex items-center gap-2 border">
-                  <div className="w-8 h-8 rounded-full bg-brand-plum flex items-center justify-center text-brand-gold text-xs font-bold">
+                  <div className="w-8 h-8 rounded-full bg-brand-forest flex items-center justify-center text-brand-gold text-xs font-bold">
                     ✓
                   </div>
                   <div>
-                    <p className="text-[10px] font-english font-semibold text-brand-plum">SFDA Licensed</p>
-                    <p className="text-[9px] text-[#6B6B6B]">مسجّل · معتمد</p>
+                    <p className="text-[10px] font-english font-semibold text-brand-forest">SFDA Licensed</p>
+                    <p className="text-[9px] text-brand-ink/60">مسجّل · معتمد</p>
                   </div>
                 </div>
               </div>
@@ -111,7 +111,7 @@ export default function ProductPage({
                     type="button"
                     onClick={() => setGalleryIdx(i)}
                     className={`rounded-xl overflow-hidden border-2 transition ${
-                      galleryIdx === i ? "border-brand-plum" : "border-transparent opacity-70 hover:opacity-100"
+                      galleryIdx === i ? "border-brand-forest" : "border-transparent opacity-70 hover:opacity-100"
                     }`}
                   >
                     <StoreImage
@@ -129,27 +129,27 @@ export default function ProductPage({
 
             {/* Buy box copy */}
             <div>
-              <p className="text-xs text-brand-gold font-semibold tracking-wide">{product.routineLabel}</p>
-              <h1 className="text-2xl md:text-[2rem] font-extrabold leading-snug mt-2 text-brand-plum">
+              <p className="text-xs text-brand-gold-deep font-semibold tracking-wide">{product.routineLabel}</p>
+              <h1 className="text-2xl md:text-[2rem] font-extrabold leading-snug mt-2 text-brand-forest">
                 {product.cardTitleAr}
               </h1>
-              <p className="mt-2 text-sm text-brand-plum/70 font-medium">{product.problemLineAr}</p>
-              <p className="mt-4 text-[#5A5A5A] leading-relaxed">{content.heroSubhead}</p>
+              <p className="mt-2 text-sm text-brand-forest/70 font-medium">{product.problemLineAr}</p>
+              <p className="mt-4 text-brand-ink/65 leading-relaxed">{content.heroSubhead}</p>
 
               <div className="mt-4 flex flex-wrap items-center gap-3">
                 <StarRating rating={product.rating} count={product.reviewCount} />
-                <span className="text-xs text-[#6B6B6B]">· مشترية مؤكدة من السعودية</span>
+                <span className="text-xs text-brand-ink/60">· مشترية مؤكدة من السعودية</span>
               </div>
 
               <div className="mt-4 flex items-baseline gap-2 flex-wrap">
-                <span className="text-3xl font-extrabold text-brand-plum">{price} ر.س</span>
+                <span className="text-3xl font-extrabold text-brand-berry">{price} ر.س</span>
                 {savings > 0 && (
                   <span className="text-sm text-brand-trust font-bold bg-brand-trust/10 px-2 py-0.5 rounded-full">
                     وفّري {savings} ريال
                   </span>
                 )}
               </div>
-              <p className="text-xs text-[#6B6B6B] mt-1">
+              <p className="text-xs text-brand-ink/60 mt-1">
                 {bundleQty === 1 && "سعر القطعة الواحدة"}
                 {bundleQty === 2 && "عرض قطعتين — الأكثر اختياراً"}
                 {bundleQty === 3 && "عرض 3 قطع — أقصى توفير"}
@@ -168,10 +168,10 @@ export default function ProductPage({
                 />
               </div>
 
-              <Button fullWidth className="mt-6 text-lg py-5 bg-brand-plum hover:bg-brand-plum-light" onClick={handleAdd}>
+              <Button fullWidth className="mt-6 text-lg py-5 bg-brand-forest hover:bg-brand-forest-light" onClick={handleAdd}>
                 {content.ctaVerb} · {price} ريال
               </Button>
-              <p className="text-center text-xs text-[#6B6B6B] mt-2">
+              <p className="text-center text-xs text-brand-ink/60 mt-2">
                 الدفع عند الاستلام · نتواصل معك للتأكيد · بدون دفع أونلاين
               </p>
 
@@ -179,8 +179,8 @@ export default function ProductPage({
 
               {/* Emotion micro-copy */}
               <div className="mt-6 p-4 rounded-2xl bg-brand-cream border border-brand-cream-dark">
-                <p className="text-sm text-[#5A5A5A] leading-relaxed">
-                  <span className="font-bold text-brand-plum">لماذا تطلبين الآن؟ </span>
+                <p className="text-sm text-brand-ink/65 leading-relaxed">
+                  <span className="font-bold text-brand-forest">لماذا تطلبين الآن؟ </span>
                   لأن كل يوم تأجيل يعني يوماً إضافياً من نفس القلق. الطلب آمن: تأكيد بالجوال،
                   توصيل لباب بيتك، ودفع عند الاستلام — مع ضمان 30 يوم كامل.
                 </p>
@@ -200,10 +200,10 @@ export default function ProductPage({
       <div className="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur border-t p-3 md:hidden z-30 shadow-lg">
         <div className="flex items-center gap-3">
           <div className="text-right flex-1 min-w-0">
-            <p className="text-xs text-[#6B6B6B] truncate">{product.nameAr} · {bundleQty}×</p>
-            <p className="font-extrabold text-brand-plum">{price} ر.س</p>
+            <p className="text-xs text-brand-ink/60 truncate">{product.nameAr} · {bundleQty}×</p>
+            <p className="font-extrabold text-brand-forest">{price} ر.س</p>
           </div>
-          <Button className="flex-1 bg-brand-plum" onClick={handleAdd}>
+          <Button className="flex-1 bg-brand-forest" onClick={handleAdd}>
             {content.ctaVerb}
           </Button>
         </div>

@@ -26,7 +26,7 @@ export default function ThankYouPage({
     return (
       <div className="max-w-xl mx-auto px-4 py-16 text-center">
         <p>لم يتم العثور على الطلب</p>
-        <Link href="/" className="text-brand-plum underline mt-4 inline-block">
+        <Link href="/" className="text-brand-forest underline mt-4 inline-block">
           الرئيسية
         </Link>
       </div>
@@ -38,7 +38,7 @@ export default function ThankYouPage({
       <div className="max-w-xl mx-auto px-4 py-16 text-center">
         <p>جاري معالجة طلبك… إذا استمرت المشكلة تواصلي معنا</p>
         <p className="font-mono text-sm mt-2">{orderId}</p>
-        <p className="text-sm text-[#6B6B6B] mt-4">hello@nurdakhil.com</p>
+        <p className="text-sm text-brand-ink/60 mt-4">hello@nurdakhil.com</p>
       </div>
     );
   }
@@ -53,14 +53,14 @@ export default function ThankYouPage({
         <div className="w-16 h-16 rounded-full bg-brand-trust/15 flex items-center justify-center mx-auto mb-4">
           <CheckCircle2 className="w-9 h-9 text-brand-trust" />
         </div>
-        <h1 className="text-2xl md:text-3xl font-extrabold text-brand-plum">
+        <h1 className="text-2xl md:text-3xl font-extrabold text-brand-forest">
           تم استلام طلبك بنجاح
         </h1>
-        <p className="text-sm text-[#6B6B6B] mt-2">رقم الطلب: {order.order_id}</p>
-        <p className="text-sm text-brand-plum font-medium mt-1">شكراً لثقتك في نورالداخل</p>
+        <p className="text-sm text-brand-ink/60 mt-2">رقم الطلب: {order.order_id}</p>
+        <p className="text-sm text-brand-forest font-medium mt-1">شكراً لثقتك في نورالداخل</p>
       </div>
 
-      <div className="bg-brand-plum text-white rounded-2xl p-8 text-center mb-6 shadow-premium">
+      <div className="bg-brand-forest text-white rounded-2xl p-8 text-center mb-6 shadow-premium">
         <p className="text-sm opacity-80">المبلغ عند الاستلام</p>
         <p className="text-4xl md:text-5xl font-extrabold mt-2">{order.order_total} ريال</p>
         <p className="text-sm mt-4 flex items-center justify-center gap-2">
@@ -73,7 +73,7 @@ export default function ThankYouPage({
       </div>
 
       <div className="bg-white rounded-2xl border border-brand-cream-dark p-6 mb-8 shadow-card">
-        <h2 className="font-extrabold text-brand-plum mb-4">ماذا يحدث الآن؟</h2>
+        <h2 className="font-extrabold text-brand-forest mb-4">ماذا يحدث الآن؟</h2>
         <div className="space-y-4">
           {[
             {
@@ -94,11 +94,11 @@ export default function ThankYouPage({
           ].map(({ icon: Icon, t, d }) => (
             <div key={t} className="flex gap-3">
               <div className="w-10 h-10 rounded-full bg-brand-cream flex items-center justify-center shrink-0">
-                <Icon className="w-5 h-5 text-brand-plum" />
+                <Icon className="w-5 h-5 text-brand-forest" />
               </div>
               <div>
-                <p className="font-bold text-sm text-brand-plum">{t}</p>
-                <p className="text-xs text-[#6B6B6B] mt-0.5 leading-relaxed">{d}</p>
+                <p className="font-bold text-sm text-brand-forest">{t}</p>
+                <p className="text-xs text-brand-ink/60 mt-0.5 leading-relaxed">{d}</p>
               </div>
             </div>
           ))}
@@ -106,7 +106,7 @@ export default function ThankYouPage({
       </div>
 
       <div className="bg-brand-cream rounded-2xl p-6 mb-8 border border-brand-cream-dark">
-        <h2 className="font-bold mb-4 text-brand-plum">ملخص الطلب</h2>
+        <h2 className="font-bold mb-4 text-brand-forest">ملخص الطلب</h2>
         {order.items.map((item) => (
           <div key={item.slug + item.qty} className="flex justify-between py-2 border-b border-brand-cream-dark text-sm last:border-0">
             <span>
@@ -121,17 +121,17 @@ export default function ThankYouPage({
             <span>{order.upsell_price} ريال</span>
           </div>
         )}
-        <div className="flex justify-between font-extrabold pt-3 text-brand-plum">
+        <div className="flex justify-between font-extrabold pt-3 text-brand-forest">
           <span>الإجمالي (دفع عند الاستلام)</span>
           <span>{order.order_total} ريال</span>
         </div>
       </div>
 
-      <div className="text-center text-sm text-[#6B6B6B] mb-10 p-4 rounded-xl border border-dashed border-brand-plum/20">
+      <div className="text-center text-sm text-brand-ink/60 mb-10 p-4 rounded-xl border border-dashed border-brand-forest/20">
         <MessageCircle className="w-5 h-5 text-brand-gold mx-auto mb-2" />
         <p>
           ضمان رضا 30 يوم · أي استفسار:{" "}
-          <a href="mailto:hello@nurdakhil.com" className="text-brand-plum font-bold underline">
+          <a href="mailto:hello@nurdakhil.com" className="text-brand-forest font-bold underline">
             hello@nurdakhil.com
           </a>
         </p>

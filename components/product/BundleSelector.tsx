@@ -14,15 +14,15 @@ export function BundleSelector({
 }) {
   return (
     <div className="space-y-3">
-      <p className="font-bold text-brand-plum">اختاري العرض:</p>
+      <p className="font-bold text-brand-forest">اختاري العرض:</p>
       {BUNDLE_OPTIONS.map((opt) => (
         <label
           key={opt.qty}
           className={cn(
             "block p-4 rounded-xl border-2 cursor-pointer transition",
             selected === opt.qty
-              ? "border-brand-plum bg-brand-plum/5 shadow-md"
-              : "border-gray-200 hover:border-brand-plum/30 bg-white"
+              ? "border-brand-forest bg-brand-forest/5 shadow-md"
+              : "border-brand-forest/12 hover:border-brand-forest/30 bg-white"
           )}
         >
           <div className="flex items-start gap-3">
@@ -31,7 +31,7 @@ export function BundleSelector({
               name="bundle"
               checked={selected === opt.qty}
               onChange={() => onChange(opt.qty)}
-              className="accent-brand-plum w-5 h-5 mt-1"
+              className="accent-brand-forest w-5 h-5 mt-1"
             />
             <div className="flex-1">
               {labels && (
@@ -52,13 +52,13 @@ export function BundleSelector({
                   </span>
                 )}
               </div>
-              <p className="text-sm text-[#6B6B6B] mt-1">
+              <p className="text-sm text-brand-ink/60 mt-1">
                 {opt.qty === 1 && "قطعة واحدة · شهر كامل"}
                 {opt.qty === 2 && "قطعتان · ثبّتي النتيجة"}
                 {opt.qty === 3 && "3 قطع · روتين كامل"}
               </p>
               <div className="flex items-baseline gap-2 mt-2">
-                <span className="text-xl font-extrabold text-brand-plum">{opt.price} ر.س</span>
+                <span className="text-xl font-extrabold text-brand-berry">{opt.price} ر.س</span>
                 {opt.savings > 0 && (
                   <span className="text-sm text-brand-trust">وفّري {opt.savings} ريال</span>
                 )}
@@ -76,8 +76,8 @@ export function StatPills({ pills }: { pills: { value: string; label: string }[]
     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
       {pills.map((p) => (
         <div key={p.label} className="bg-white border rounded-xl p-3 text-center">
-          <p className="text-xl font-extrabold text-brand-plum">{p.value}</p>
-          <p className="text-xs text-[#6B6B6B]">{p.label}</p>
+          <p className="text-xl font-extrabold text-brand-forest">{p.value}</p>
+          <p className="text-xs text-brand-ink/60">{p.label}</p>
         </div>
       ))}
     </div>
@@ -95,8 +95,8 @@ export function CodTrustRow() {
     <div className="grid grid-cols-2 gap-3 mt-4">
       {items.map((i) => (
         <div key={i.t} className="text-center p-2 bg-brand-cream rounded-lg text-xs">
-          <p className="font-bold text-brand-plum">{i.t}</p>
-          <p className="text-[#6B6B6B]">{i.d}</p>
+          <p className="font-bold text-brand-forest">{i.t}</p>
+          <p className="text-brand-ink/60">{i.d}</p>
         </div>
       ))}
     </div>

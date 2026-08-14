@@ -13,10 +13,10 @@ export function TrustIconGrid({ className }: { className?: string }) {
       {items.map((item) => (
         <div
           key={item.top}
-          className="border border-brand-plum/15 bg-white/50 backdrop-blur-sm rounded-xl px-3 py-4 text-center"
+          className="border border-brand-forest/15 bg-white/50 backdrop-blur-sm rounded-xl px-3 py-4 text-center"
         >
           <item.icon className="w-4 h-4 text-brand-gold mx-auto mb-2" strokeWidth={1.75} />
-          <p className="text-sm font-extrabold text-brand-plum">{item.top}</p>
+          <p className="text-sm font-extrabold text-brand-forest">{item.top}</p>
           <p className="text-[10px] text-brand-ink/55 mt-0.5">{item.label}</p>
         </div>
       ))}

@@ -37,17 +37,17 @@ export function ProductImage({
       />
       {showBadge && (
         <div className="absolute bottom-4 left-4 bg-white rounded-xl shadow-premium px-3 py-2 flex items-center gap-2 border border-brand-cream-dark">
-          <div className="w-8 h-8 rounded-full bg-brand-plum flex items-center justify-center text-brand-gold text-xs font-bold">
+          <div className="w-8 h-8 rounded-full bg-brand-forest flex items-center justify-center text-brand-gold text-xs font-bold">
             ✓
           </div>
           <div className="text-right">
-            <p className="text-[10px] font-english font-semibold text-brand-plum">SFDA Licensed</p>
-            <p className="text-[9px] text-[#6B6B6B]">مسجّل · معتمد</p>
+            <p className="text-[10px] font-english font-semibold text-brand-forest">SFDA Licensed</p>
+            <p className="text-[9px] text-brand-ink/60">مسجّل · معتمد</p>
           </div>
         </div>
       )}
       {label && (
-        <span className="absolute top-3 right-3 text-[10px] bg-brand-plum text-white px-2 py-1 rounded-full font-bold">
+        <span className="absolute top-3 right-3 text-[10px] bg-brand-forest text-white px-2 py-1 rounded-full font-bold">
           {label}
         </span>
       )}

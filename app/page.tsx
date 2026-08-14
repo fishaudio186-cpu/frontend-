@@ -62,7 +62,7 @@ export default function HomePage() {
 
               <div className="flex flex-wrap items-center gap-4 mt-9">
                 <Link href={`/products/${HERO_SLUG}`}>
-                  <Button className="text-base px-9 py-4 bg-brand-gold text-brand-plum hover:bg-brand-gold-dark rounded-2xl font-extrabold shadow-[0_18px_45px_rgba(201,165,107,0.28)]">
+                  <Button className="text-base px-9 py-4 bg-brand-gold text-brand-forest hover:bg-brand-gold-dark rounded-2xl font-extrabold shadow-[0_18px_45px_rgba(201,165,107,0.28)]">
                     ابدئي روتين نور الشيب
                   </Button>
                 </Link>
@@ -96,11 +96,11 @@ export default function HomePage() {
           />
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 max-w-4xl mx-auto">
             {WHY_ITEMS.map((item, i) => (
-              <div key={item.title} className="border-t border-brand-plum/15 pt-6">
-                <p className="font-english text-xs tracking-[0.2em] text-brand-gold mb-3">
+              <div key={item.title} className="border-t border-brand-forest/15 pt-6">
+                <p className="font-english text-xs tracking-[0.2em] text-brand-gold-deep mb-3">
                   0{i + 1}
                 </p>
-                <h3 className="font-extrabold text-lg text-brand-plum">{item.title}</h3>
+                <h3 className="font-extrabold text-lg text-brand-forest">{item.title}</h3>
                 <p className="mt-3 text-brand-ink/60 leading-relaxed">{item.body}</p>
               </div>
             ))}
@@ -141,10 +141,10 @@ export default function HomePage() {
               },
             ].map((s) => (
               <div key={s.n} className="text-center md:text-right">
-                <span className="font-english text-brand-gold tracking-[0.2em] text-sm font-semibold">
+                <span className="font-english text-brand-gold-deep tracking-[0.2em] text-sm font-semibold">
                   {s.n}
                 </span>
-                <h3 className="font-extrabold text-lg mt-3 text-brand-plum">{s.t}</h3>
+                <h3 className="font-extrabold text-lg mt-3 text-brand-forest">{s.t}</h3>
                 <p className="text-sm text-brand-ink/60 mt-3 leading-relaxed">{s.d}</p>
               </div>
             ))}
@@ -152,9 +152,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 bg-brand-plum text-white relative overflow-hidden">
+      <section className="py-24 bg-brand-forest text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_70%_30%,#C9A56B,transparent_45%)]" />
-        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_80%,#6B1F3A,transparent_40%)]" />
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_80%,#1E6145,transparent_40%)]" />
         <div className="max-w-3xl mx-auto px-4 text-center relative animate-fade-in">
           <p className="font-english text-xs tracking-[0.3em] text-brand-gold uppercase mb-4">
             Begin Your Ritual
@@ -166,7 +166,7 @@ export default function HomePage() {
             ابدئي روتين نور الشيب اليوم — دفع عند الاستلام، شحن مجاني، وضمان استرجاع 30 يوم.
           </p>
           <Link href={`/products/${HERO_SLUG}`} className="inline-block mt-10">
-            <Button className="bg-brand-gold text-brand-plum hover:bg-brand-gold-dark text-lg px-12 py-4 font-extrabold rounded-2xl">
+            <Button className="bg-brand-gold text-brand-forest hover:bg-brand-gold-dark text-lg px-12 py-4 font-extrabold rounded-2xl">
               ابدئي روتين نور الشيب
             </Button>
           </Link>
@@ -179,7 +179,7 @@ export default function HomePage() {
         items={content.faqs.slice(0, 6)}
       />
 
-      <section className="py-14 bg-brand-cream border-t border-brand-plum/8">
+      <section className="py-14 bg-brand-cream border-t border-brand-forest/8">
         <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { icon: Truck, t: "شحن مجاني", d: "لجميع مناطق المملكة" },
@@ -188,8 +188,8 @@ export default function HomePage() {
             { icon: ShieldCheck, t: "مرخّص · حلال", d: "تركيبة عشبية معتمدة" },
           ].map(({ icon: Icon, t, d }) => (
             <div key={t} className="text-center">
-              <Icon className="w-7 h-7 text-brand-plum mx-auto mb-3" strokeWidth={1.5} />
-              <p className="font-bold text-sm text-brand-plum">{t}</p>
+              <Icon className="w-7 h-7 text-brand-forest mx-auto mb-3" strokeWidth={1.5} />
+              <p className="font-bold text-sm text-brand-forest">{t}</p>
               <p className="text-xs text-brand-ink/50 mt-1">{d}</p>
             </div>
           ))}

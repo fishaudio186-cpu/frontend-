@@ -21,18 +21,18 @@ export function ImagePlaceholder({
   return (
     <div
       className={cn(
-        "relative w-full overflow-hidden rounded-2xl border border-dashed border-brand-plum/20",
+        "relative w-full overflow-hidden rounded-2xl border border-dashed border-brand-forest/20",
         "bg-gradient-to-br from-brand-cream via-white to-brand-cream-dark",
         "flex flex-col items-center justify-center gap-3 text-center p-6",
         aspectClass,
         className
       )}
     >
-      <div className="w-14 h-14 rounded-full bg-brand-plum/10 flex items-center justify-center">
-        <ImageIcon className="w-7 h-7 text-brand-plum/40" />
+      <div className="w-14 h-14 rounded-full bg-brand-forest/10 flex items-center justify-center">
+        <ImageIcon className="w-7 h-7 text-brand-forest/40" />
       </div>
-      <p className="text-sm font-bold text-brand-plum/50">{label || "صورة المنتج"}</p>
-      <p className="text-[11px] text-[#9A9A9A] max-w-[200px]">مساحة للصورة — تُستبدل لاحقاً</p>
+      <p className="text-sm font-bold text-brand-forest/50">{label || "صورة المنتج"}</p>
+      <p className="text-[11px] text-brand-ink/45 max-w-[200px]">مساحة للصورة — تُستبدل لاحقاً</p>
       <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
         style={{
           backgroundImage:

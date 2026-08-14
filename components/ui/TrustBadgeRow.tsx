@@ -26,13 +26,13 @@ export function TrustBadgeRow({
             "rounded-xl border px-3 py-3 text-center transition-colors",
             isDark
               ? "border-white/15 bg-white/[0.04] hover:border-brand-gold/50"
-              : "border-brand-plum/12 bg-white hover:border-brand-gold/60"
+              : "border-brand-forest/12 bg-white hover:border-brand-gold/60"
           )}
         >
           <p
             className={cn(
               "font-english text-[13px] font-semibold tracking-[0.12em]",
-              isDark ? "text-brand-gold" : "text-brand-plum"
+              isDark ? "text-brand-gold" : "text-brand-forest"
             )}
           >
             {badge.top}

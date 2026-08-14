@@ -37,7 +37,7 @@ export function Modal({
       >
         <button
           onClick={onClose}
-          className="absolute top-4 left-4 p-2 rounded-full hover:bg-gray-100"
+          className="absolute top-4 left-4 p-2 rounded-full hover:bg-brand-cream-dark"
           aria-label="إغلاق"
         >
           <X className="w-5 h-5" />

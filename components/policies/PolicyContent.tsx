@@ -6,7 +6,7 @@ function Policy({ title, children }: { title: string; children: React.ReactNode 
   return (
     <>
       <h1 className="text-3xl font-bold mb-6">{title}</h1>
-      <div className="space-y-4 text-[#6B6B6B] leading-relaxed">{children}</div>
+      <div className="space-y-4 text-brand-ink/60 leading-relaxed">{children}</div>
     </>
   );
 }

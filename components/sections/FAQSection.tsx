@@ -18,9 +18,9 @@ export function FAQSection({
   return (
     <section className="py-20 bg-white">
       <div className="max-w-3xl mx-auto px-4">
-        <p className="text-xs font-english tracking-widest text-brand-gold uppercase text-center mb-2">FAQ</p>
-        <h2 className="text-2xl md:text-3xl font-extrabold text-center text-brand-plum mb-2">{title}</h2>
-        {subtitle && <p className="text-center text-[#6B6B6B] mb-10">{subtitle}</p>}
+        <p className="text-xs font-english tracking-widest text-brand-gold-deep uppercase text-center mb-2">FAQ</p>
+        <h2 className="text-2xl md:text-3xl font-extrabold text-center text-brand-forest mb-2">{title}</h2>
+        {subtitle && <p className="text-center text-brand-ink/60 mb-10">{subtitle}</p>}
         {!subtitle && <div className="mb-8" />}
         <div className="space-y-3">
           {items.map((item, i) => (
@@ -33,7 +33,7 @@ export function FAQSection({
                 <ChevronDown className={cn("w-5 h-5 shrink-0 transition", open === i && "rotate-180")} />
               </button>
               {open === i && (
-                <p className="px-4 pb-4 text-[#6B6B6B] text-sm leading-relaxed">{item.a}</p>
+                <p className="px-4 pb-4 text-brand-ink/60 text-sm leading-relaxed">{item.a}</p>
               )}
             </div>
           ))}

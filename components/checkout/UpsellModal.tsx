@@ -40,11 +40,11 @@ export function UpsellModal({
   return (
     <Modal open={open} onClose={onDecline}>
       <div className="pt-8 text-center">
-        <p className="text-xs font-english tracking-widest text-brand-gold uppercase mb-2">
+        <p className="text-xs font-english tracking-widest text-brand-gold-deep uppercase mb-2">
           One-Time Offer
         </p>
-        <p className="font-bold text-lg mb-2 text-brand-plum">قطعة إضافية بسعر مخفّض</p>
-        <p className="text-sm text-[#6B6B6B] mb-6">
+        <p className="font-bold text-lg mb-2 text-brand-forest">قطعة إضافية بسعر مخفّض</p>
+        <p className="text-sm text-brand-ink/60 mb-6">
           عرض لمرة واحدة مع هذا الطلب — {seconds} ثانية متبقية
         </p>
 
@@ -52,10 +52,10 @@ export function UpsellModal({
           <ProductImage className="w-32 h-32 rounded-xl" showBadge />
           <div>
             <h3 className="font-bold text-xl">{product.nameAr}</h3>
-            <p className="text-sm text-[#6B6B6B]">{product.taglineAr}</p>
+            <p className="text-sm text-brand-ink/60">{product.taglineAr}</p>
             <p className="mt-2">
-              <span className="line-through text-[#6B6B6B]">{UNIT_PRICE} ريال</span>{" "}
-              <span className="font-extrabold text-2xl text-brand-plum">{UPSELL_PRICE} ريال</span>
+              <span className="line-through text-brand-ink/60">{UNIT_PRICE} ريال</span>{" "}
+              <span className="font-extrabold text-2xl text-brand-forest">{UPSELL_PRICE} ريال</span>
             </p>
             <p className="text-sm text-brand-trust">
               وفّري {UNIT_PRICE - UPSELL_PRICE} ريال — تُضاف لطلبك الآن

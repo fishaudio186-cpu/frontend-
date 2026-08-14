@@ -19,7 +19,7 @@ export function Header() {
   const openDrawer = useCartStore((s) => s.openDrawer);
 
   return (
-    <header className="sticky top-0 z-40 bg-brand-plum-dark/95 backdrop-blur-xl border-b border-white/10">
+    <header className="sticky top-0 z-40 bg-brand-forest-dark/95 backdrop-blur-xl border-b border-brand-gold/15">
       <div className="max-w-7xl mx-auto px-4 h-[76px] flex items-center justify-between gap-4">
         <Logo tone="dark" />
 
@@ -43,7 +43,7 @@ export function Header() {
           >
             <ShoppingBag className="w-5 h-5 text-white" />
             {itemCount > 0 && (
-              <span className="absolute -top-0.5 -left-0.5 bg-brand-gold text-brand-plum text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
+              <span className="absolute -top-0.5 -left-0.5 bg-brand-gold text-brand-forest text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">
                 {itemCount}
               </span>
             )}
@@ -59,7 +59,7 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <nav className="md:hidden border-t border-white/10 bg-brand-plum-dark px-4 py-4 flex flex-col gap-1">
+        <nav className="md:hidden border-t border-white/10 bg-brand-forest-dark px-4 py-4 flex flex-col gap-1">
           {NAV.map((n) => (
             <Link
               key={n.href}

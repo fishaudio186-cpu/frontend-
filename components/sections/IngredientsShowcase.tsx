@@ -35,8 +35,8 @@ export function IngredientsShowcase() {
                 />
               </div>
               <div className="p-4 text-center border-t border-brand-cream-dark">
-                <p className="font-extrabold text-brand-plum">{ing.nameAr}</p>
-                <p className="text-[10px] font-english text-brand-gold mt-0.5 tracking-wide">
+                <p className="font-extrabold text-brand-forest">{ing.nameAr}</p>
+                <p className="text-[10px] font-english text-brand-gold-deep mt-0.5 tracking-wide">
                   {ing.nameEn}
                 </p>
               </div>

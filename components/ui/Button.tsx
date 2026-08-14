@@ -16,9 +16,9 @@ export function Button({
     <button
       className={cn(
         "font-bold py-4 px-8 rounded-2xl transition-all duration-300 disabled:opacity-50",
-        variant === "primary" && "bg-brand-plum text-white hover:bg-brand-plum-light shadow-premium",
-        variant === "secondary" && "border border-brand-plum/25 text-brand-plum hover:bg-brand-plum hover:text-white",
-        variant === "ghost" && "text-brand-ink/55 hover:text-brand-plum py-2",
+        variant === "primary" && "bg-brand-forest text-white hover:bg-brand-forest-light shadow-premium",
+        variant === "secondary" && "border border-brand-forest/25 text-brand-forest hover:bg-brand-forest hover:text-white",
+        variant === "ghost" && "text-brand-ink/55 hover:text-brand-forest py-2",
         fullWidth && "w-full",
         className
       )}

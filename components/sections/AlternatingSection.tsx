@@ -33,15 +33,12 @@ export function AlternatingSection({
   imageSide?: "left" | "right";
   imageAspect?: "square" | "video" | "portrait" | "wide";
   imageObjectFit?: "cover" | "contain";
-  bg?: "white" | "cream" | "plum";
+  bg?: "white" | "cream" | "forest";
   className?: string;
 }) {
+  const onForest = bg === "forest";
   const bgClass =
-    bg === "cream"
-      ? "bg-brand-cream"
-      : bg === "plum"
-        ? "bg-brand-plum text-white"
-        : "bg-white";
+    bg === "cream" ? "bg-brand-cream" : onForest ? "bg-brand-forest text-white" : "bg-white";
 
   // RTL: first child lands on the RIGHT. For image on LEFT → text first, image second.
   const imageOnLeft = imageSide === "left";
@@ -52,7 +49,7 @@ export function AlternatingSection({
         <p
           className={cn(
             "text-xs font-english tracking-[0.2em] uppercase",
-            bg === "plum" ? "text-brand-gold" : "text-brand-gold"
+            onForest ? "text-brand-gold" : "text-brand-gold-deep"
           )}
         >
           {eyebrow}
@@ -61,7 +58,7 @@ export function AlternatingSection({
       <h2
         className={cn(
           "text-2xl md:text-3xl font-extrabold leading-snug",
-          bg === "plum" ? "text-white" : "text-brand-plum"
+          onForest ? "text-white" : "text-brand-forest"
         )}
       >
         {title}
@@ -70,13 +67,13 @@ export function AlternatingSection({
         <p
           className={cn(
             "leading-relaxed text-base",
-            bg === "plum" ? "text-white/85" : "text-[#5A5A5A]"
+            onForest ? "text-white/85" : "text-brand-ink/65"
           )}
         >
           {subtitle}
         </p>
       )}
-      <div className={cn(bg === "plum" ? "text-white/90" : "text-[#5A5A5A]")}>{children}</div>
+      <div className={cn(onForest ? "text-white/90" : "text-brand-ink/65")}>{children}</div>
     </div>
   );
 

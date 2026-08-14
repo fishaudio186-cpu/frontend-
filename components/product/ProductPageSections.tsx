@@ -34,7 +34,7 @@ export function ProductPageSections({
 }) {
   return (
     <>
-      <section className="bg-brand-plum text-white py-8 md:py-10">
+      <section className="bg-brand-forest text-white py-8 md:py-10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-xs font-english tracking-widest text-brand-gold uppercase mb-2">
             Clinical Insight
@@ -71,7 +71,7 @@ export function ProductPageSections({
           </li>
           <li className="flex gap-2 items-start">
             <CheckCircle2 className="w-4 h-4 text-brand-trust mt-0.5 shrink-0" />
-            <span className="font-bold text-brand-plum">الحل يبدأ من تركيبة صحيحة — لا من وعود فارغة</span>
+            <span className="font-bold text-brand-forest">الحل يبدأ من تركيبة صحيحة — لا من وعود فارغة</span>
           </li>
         </ul>
       </AlternatingSection>
@@ -91,15 +91,15 @@ export function ProductPageSections({
           <div className="grid sm:grid-cols-2 gap-3 mt-2">
             <div className="rounded-xl bg-white border p-4">
               <p className="text-xs font-bold text-red-500 mb-2">ما لا تريدينه</p>
-              <ul className="text-sm space-y-1.5 text-[#6B6B6B]">
+              <ul className="text-sm space-y-1.5 text-brand-ink/60">
                 <li>✗ رائحة كيماوية</li>
                 <li>✗ نتيجة مصطنعة</li>
                 <li>✗ لا يناسب مناخ الخليج</li>
               </ul>
             </div>
-            <div className="rounded-xl bg-brand-plum/5 border border-brand-plum/20 p-4">
+            <div className="rounded-xl bg-brand-forest/5 border border-brand-forest/20 p-4">
               <p className="text-xs font-bold text-brand-trust mb-2">نورالداخل</p>
-              <ul className="text-sm space-y-1.5 text-brand-plum">
+              <ul className="text-sm space-y-1.5 text-brand-forest">
                 <li>✓ تركيبة مدروسة</li>
                 <li>✓ مظهر طبيعي</li>
                 <li>✓ مصمّم للحر والرطوبة</li>
@@ -129,15 +129,15 @@ export function ProductPageSections({
             <div key={t} className="flex gap-3 p-3 rounded-xl bg-brand-cream border border-brand-cream-dark">
               <Icon className="w-6 h-6 text-brand-gold shrink-0 mt-0.5" />
               <div>
-                <p className="font-bold text-brand-plum text-sm">{t}</p>
-                <p className="text-xs text-[#6B6B6B]">{d}</p>
+                <p className="font-bold text-brand-forest text-sm">{t}</p>
+                <p className="text-xs text-brand-ink/60">{d}</p>
               </div>
             </div>
           ))}
         </div>
-        <p className="text-sm mt-4 leading-relaxed border-r-4 border-brand-gold pr-4 text-[#5A5A5A]">
+        <p className="text-sm mt-4 leading-relaxed border-r-4 border-brand-gold pr-4 text-brand-ink/65">
           «لا أضع على شعري شيئاً لا أعرف مصدره. أول ما رأيت التسجيل والوضوح — طلبت.»
-          <span className="block text-xs text-brand-plum font-bold mt-1">— مشترية مؤكدة · الرياض</span>
+          <span className="block text-xs text-brand-forest font-bold mt-1">— مشترية مؤكدة · الرياض</span>
         </p>
       </AlternatingSection>
 
@@ -156,26 +156,26 @@ export function ProductPageSections({
           {content.ingredients.map((ing) => (
             <div key={ing.name} className="bg-white rounded-xl p-4 border shadow-sm">
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h3 className="font-extrabold text-brand-plum">{ing.name}</h3>
+                <h3 className="font-extrabold text-brand-forest">{ing.name}</h3>
                 {ing.dose && (
-                  <span className="text-xs bg-brand-plum/10 text-brand-plum px-2 py-0.5 rounded-full font-bold">
+                  <span className="text-xs bg-brand-forest/10 text-brand-forest px-2 py-0.5 rounded-full font-bold">
                     {ing.dose}
                   </span>
                 )}
               </div>
               <p className="font-bold text-sm mt-2 text-brand-trust">{ing.benefit}</p>
-              <p className="text-sm text-[#6B6B6B] mt-1 leading-relaxed">{ing.detail}</p>
+              <p className="text-sm text-brand-ink/60 mt-1 leading-relaxed">{ing.detail}</p>
             </div>
           ))}
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {content.freeFrom.map((f) => (
-            <span key={f} className="text-xs bg-white border px-3 py-1.5 rounded-full text-brand-plum font-medium">
+            <span key={f} className="text-xs bg-white border px-3 py-1.5 rounded-full text-brand-forest font-medium">
               ✓ {f}
             </span>
           ))}
         </div>
-        <p className="text-[11px] text-[#9A9A9A] mt-3">
+        <p className="text-[11px] text-brand-ink/45 mt-3">
           *النتائج تختلف حسب نوع الشعر والاستخدام المنتظم. منتج تجميلي — لا يغني عن استشارة مختص.
         </p>
       </AlternatingSection>
@@ -208,15 +208,15 @@ export function ProductPageSections({
         imageAspect="square"
         bg="white"
       >
-        <blockquote className="bg-brand-plum/5 border-r-4 border-brand-plum p-5 rounded-xl mb-6">
-          <p className="leading-relaxed text-[#5A5A5A]">&ldquo;{content.expertQuote.text}&rdquo;</p>
-          <footer className="mt-3 font-bold text-sm text-brand-plum">— {content.expertQuote.title}</footer>
+        <blockquote className="bg-brand-forest/5 border-r-4 border-brand-forest p-5 rounded-xl mb-6">
+          <p className="leading-relaxed text-brand-ink/65">&ldquo;{content.expertQuote.text}&rdquo;</p>
+          <footer className="mt-3 font-bold text-sm text-brand-forest">— {content.expertQuote.title}</footer>
         </blockquote>
         <div className="grid grid-cols-2 gap-3">
           {content.stats.map((s) => (
             <div key={s.label} className="text-center p-4 bg-brand-cream rounded-xl border border-brand-cream-dark">
-              <p className="text-2xl font-extrabold text-brand-plum">{s.value}</p>
-              <p className="text-xs text-[#6B6B6B] mt-1">{s.label}</p>
+              <p className="text-2xl font-extrabold text-brand-forest">{s.value}</p>
+              <p className="text-xs text-brand-ink/60 mt-1">{s.label}</p>
             </div>
           ))}
         </div>
@@ -241,8 +241,8 @@ export function ProductPageSections({
               </span>
               <div>
                 <p className="text-xs text-brand-trust font-bold">{t.period}</p>
-                <h3 className="font-extrabold text-brand-plum mt-0.5">{t.title}</h3>
-                <p className="text-sm text-[#6B6B6B] mt-1 leading-relaxed">{t.body}</p>
+                <h3 className="font-extrabold text-brand-forest mt-0.5">{t.title}</h3>
+                <p className="text-sm text-brand-ink/60 mt-1 leading-relaxed">{t.body}</p>
               </div>
             </div>
           ))}
@@ -273,13 +273,13 @@ export function ProductPageSections({
               key={c.name}
               className={`rounded-xl p-4 border-2 ${
                 c.highlight
-                  ? "border-brand-plum bg-brand-plum/5 shadow-card"
-                  : "border-gray-200 bg-white"
+                  ? "border-brand-forest bg-brand-forest/5 shadow-card"
+                  : "border-brand-forest/12 bg-white"
               }`}
             >
               <div className="flex flex-wrap justify-between gap-2 mb-2">
                 <h3 className="font-extrabold text-sm md:text-base">{c.name}</h3>
-                <span className="text-brand-plum font-bold text-sm">{c.price}</span>
+                <span className="text-brand-forest font-bold text-sm">{c.price}</span>
               </div>
               {c.cons.length > 0 && (
                 <ul className="text-sm text-red-700/80 space-y-1">
@@ -314,20 +314,20 @@ export function ProductPageSections({
         <div className="grid grid-cols-2 gap-3 mb-6">
           {content.usageStats.map((s) => (
             <div key={s.label} className="text-center p-3 bg-white rounded-xl border">
-              <p className="text-xl font-extrabold text-brand-plum">{s.value}</p>
-              <p className="text-[11px] text-[#6B6B6B]">{s.label}</p>
+              <p className="text-xl font-extrabold text-brand-forest">{s.value}</p>
+              <p className="text-[11px] text-brand-ink/60">{s.label}</p>
             </div>
           ))}
         </div>
         <div className="space-y-3">
           {content.howToUse.map((h, i) => (
             <div key={h.title} className="flex gap-3 items-start">
-              <span className="w-8 h-8 rounded-full bg-brand-plum text-brand-gold flex items-center justify-center font-bold shrink-0 text-sm">
+              <span className="w-8 h-8 rounded-full bg-brand-forest text-brand-gold flex items-center justify-center font-bold shrink-0 text-sm">
                 {i + 1}
               </span>
               <div>
-                <p className="font-bold text-brand-plum">{h.title}</p>
-                <p className="text-sm text-[#6B6B6B]">{h.body}</p>
+                <p className="font-bold text-brand-forest">{h.title}</p>
+                <p className="text-sm text-brand-ink/60">{h.body}</p>
               </div>
             </div>
           ))}
@@ -359,13 +359,13 @@ export function ProductPageSections({
           ))}
         </div>
         {onAddToCart && (
-          <Button className="mt-6 bg-brand-plum hover:bg-brand-plum-light" onClick={onAddToCart}>
+          <Button className="mt-6 bg-brand-forest hover:bg-brand-forest-light" onClick={onAddToCart}>
             ابدئي الروتين بضمان 30 يوم
           </Button>
         )}
       </AlternatingSection>
 
-      <section className="py-16 md:py-20 bg-brand-plum text-white">
+      <section className="py-16 md:py-20 bg-brand-forest text-white">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10 items-center mb-12">
             <StoreImage
@@ -431,17 +431,17 @@ export function ProductPageSections({
 
       <section className="py-12 bg-brand-cream">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="font-extrabold text-xl text-brand-plum mb-2">نوصّل لكل مدن المملكة</h2>
-          <p className="text-sm text-[#6B6B6B] mb-6">من الرياض إلى جدة والدمام — وجميع المناطق</p>
+          <h2 className="font-extrabold text-xl text-brand-forest mb-2">نوصّل لكل مدن المملكة</h2>
+          <p className="text-sm text-brand-ink/60 mb-6">من الرياض إلى جدة والدمام — وجميع المناطق</p>
           <div className="flex flex-wrap justify-center gap-2">
             {content.cities.map((c) => (
               <span key={c} className="text-sm bg-white border border-brand-cream-dark px-3 py-1.5 rounded-full shadow-sm">
                 {c}
               </span>
             ))}
-            <span className="text-sm text-brand-plum font-bold px-3 py-1.5">+ جميع المناطق</span>
+            <span className="text-sm text-brand-forest font-bold px-3 py-1.5">+ جميع المناطق</span>
           </div>
-          <p className="text-xs text-[#9A9A9A] mt-4">شركاء التوصيل: أرامكس · سمسا · ناقل</p>
+          <p className="text-xs text-brand-ink/45 mt-4">شركاء التوصيل: أرامكس · سمسا · ناقل</p>
         </div>
       </section>
 
@@ -454,16 +454,16 @@ export function ProductPageSections({
       <section className="py-14 bg-white border-y border-brand-cream-dark">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <Sparkles className="w-8 h-8 text-brand-gold mx-auto mb-3" />
-          <h2 className="text-2xl font-extrabold text-brand-plum">
+          <h2 className="text-2xl font-extrabold text-brand-forest">
             جاهزة لبدء روتين {product.nameAr}؟
           </h2>
-          <p className="mt-3 text-[#6B6B6B] leading-relaxed">
+          <p className="mt-3 text-brand-ink/60 leading-relaxed">
             قطعة 199 · قطعتان 279 (وفّري 119) · 3 قطع 349 (وفّري 248)
             <br />
             دفع عند الاستلام · ضمان 30 يوم · تأكيد بالجوال
           </p>
           {onAddToCart && (
-            <Button className="mt-6 text-lg px-12 bg-brand-plum hover:bg-brand-plum-light" onClick={onAddToCart}>
+            <Button className="mt-6 text-lg px-12 bg-brand-forest hover:bg-brand-forest-light" onClick={onAddToCart}>
               {content.ctaVerb}
             </Button>
           )}

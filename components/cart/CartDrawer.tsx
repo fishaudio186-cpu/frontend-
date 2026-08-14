@@ -33,10 +33,10 @@ export function CartDrawer() {
     <Drawer open={isDrawerOpen} onClose={closeDrawer}>
       {items.length === 0 ? (
         <div className="p-8 text-center">
-          <p className="text-lg font-bold mb-2 text-brand-plum">سلتك فارغة</p>
-          <p className="text-[#6B6B6B] mb-6">اطلبي نور الشيب — 199 ريال · دفع عند الاستلام</p>
+          <p className="text-lg font-bold mb-2 text-brand-forest">سلتك فارغة</p>
+          <p className="text-brand-ink/60 mb-6">اطلبي نور الشيب — 199 ريال · دفع عند الاستلام</p>
           <Link href={`/products/${HERO_SLUG}`} onClick={closeDrawer}>
-            <Button className="bg-brand-plum">اطلبي الآن</Button>
+            <Button className="bg-brand-forest">اطلبي الآن</Button>
           </Link>
         </div>
       ) : (
@@ -63,8 +63,8 @@ export function CartDrawer() {
                     />
                   </div>
                   <div className="flex-1">
-                    <p className="font-bold text-brand-plum">{item.nameAr}</p>
-                    <p className="text-sm text-brand-plum font-bold">
+                    <p className="font-bold text-brand-forest">{item.nameAr}</p>
+                    <p className="text-sm text-brand-forest font-bold">
                       {calculateLineTotal(item.qty)} ريال
                     </p>
                     {savings > 0 && (
@@ -104,15 +104,15 @@ export function CartDrawer() {
           <div className="p-4 border-t bg-white mt-auto shrink-0">
             <div className="flex justify-between mb-1">
               <span className="font-medium">الإجمالي (دفع عند الاستلام):</span>
-              <span className="font-extrabold text-xl text-brand-plum">{total} ريال</span>
+              <span className="font-extrabold text-xl text-brand-forest">{total} ريال</span>
             </div>
-            <p className="text-xs text-[#6B6B6B] mb-3 flex items-center gap-1">
+            <p className="text-xs text-brand-ink/60 mb-3 flex items-center gap-1">
               <Phone className="w-3 h-3" /> خطوة واحدة وتخلصين · بنتصل للتأكيد ✓
             </p>
-            <Button fullWidth className="bg-brand-plum hover:bg-brand-plum-light" onClick={handleCheckout}>
+            <Button fullWidth className="bg-brand-forest hover:bg-brand-forest-light" onClick={handleCheckout}>
               إتمام الطلب — {total} ريال
             </Button>
-            <p className="text-[10px] text-center text-[#9A9A9A] mt-2">
+            <p className="text-[10px] text-center text-brand-ink/45 mt-2">
               ضمان 30 يوم · دفع عند الاستلام · توصيل المملكة
             </p>
           </div>

@@ -22,7 +22,7 @@ export function StarRating({
       </div>
       <span className="font-bold">{rating}</span>
       {count !== undefined && (
-        <span className="text-[#6B6B6B]">({count})</span>
+        <span className="text-brand-ink/60">({count})</span>
       )}
     </div>
   );

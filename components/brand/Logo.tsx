@@ -11,7 +11,7 @@ export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
       <span
         className={cn(
           "flex items-center justify-center shrink-0",
-          onDark && "rounded-2xl bg-brand-cream h-12 w-12 md:h-14 md:w-14 p-1.5 shadow-[0_6px_18px_rgba(0,0,0,0.28)]"
+          onDark && "rounded-2xl bg-brand-cream h-12 w-12 md:h-14 md:w-14 p-1.5 shadow-[0_6px_18px_rgba(8,33,22,0.35)]"
         )}
       >
         <Image
@@ -27,7 +27,7 @@ export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
         <span
           className={cn(
             "font-extrabold text-base md:text-lg",
-            onDark ? "text-white" : "text-brand-plum"
+            onDark ? "text-white" : "text-brand-forest"
           )}
         >
           نورالداخل

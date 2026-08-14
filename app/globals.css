@@ -10,8 +10,8 @@
   }
   body {
     @apply bg-brand-cream text-brand-ink font-arabic antialiased;
-    background-color: #f6f3ef !important;
-    color: #1a1214 !important;
+    background-color: #fbf8f2 !important;
+    color: #15211b !important;
   }
   input,
   select,
@@ -25,29 +25,29 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-brand-plum text-white font-bold py-4 px-8 rounded-2xl
-           hover:bg-brand-plum-light transition-all duration-300 shadow-premium;
+    @apply bg-brand-forest text-white font-bold py-4 px-8 rounded-2xl
+           hover:bg-brand-forest-light transition-all duration-300 shadow-premium;
   }
   .btn-secondary {
-    @apply border border-brand-plum/25 text-brand-plum font-bold py-3 px-6 rounded-2xl
-           hover:bg-brand-plum hover:text-white transition-all duration-300;
+    @apply border border-brand-forest/25 text-brand-forest font-bold py-3 px-6 rounded-2xl
+           hover:bg-brand-forest hover:text-white transition-all duration-300;
   }
   .atmosphere {
     background:
-      radial-gradient(ellipse 80% 60% at 15% 20%, rgba(201, 165, 107, 0.18), transparent 55%),
-      radial-gradient(ellipse 70% 50% at 90% 10%, rgba(107, 31, 58, 0.12), transparent 50%),
-      linear-gradient(180deg, #fbf9f6 0%, #f3eee8 55%, #efe8e1 100%);
+      radial-gradient(ellipse 80% 60% at 15% 20%, rgba(201, 165, 107, 0.16), transparent 55%),
+      radial-gradient(ellipse 70% 50% at 90% 10%, rgba(20, 69, 47, 0.08), transparent 50%),
+      linear-gradient(180deg, #fdfbf7 0%, #f7f2e8 55%, #f1eade 100%);
   }
   .hero-plane {
     background:
-      radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.92), rgba(246, 243, 239, 0.55) 55%, transparent 75%),
-      linear-gradient(135deg, #f8f4ef 0%, #efe6dc 100%);
+      radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.94), rgba(251, 248, 242, 0.55) 55%, transparent 75%),
+      linear-gradient(135deg, #fdfbf7 0%, #f1eade 100%);
   }
   .hero-stage {
     background:
-      radial-gradient(ellipse 70% 55% at 78% 12%, rgba(201, 165, 107, 0.16), transparent 58%),
-      radial-gradient(ellipse 60% 50% at 10% 88%, rgba(107, 31, 58, 0.5), transparent 55%),
-      linear-gradient(160deg, #2e0c18 0%, #1b0a12 55%, #14070d 100%);
+      radial-gradient(ellipse 70% 55% at 78% 12%, rgba(201, 165, 107, 0.2), transparent 58%),
+      radial-gradient(ellipse 60% 50% at 10% 88%, rgba(30, 97, 69, 0.55), transparent 55%),
+      linear-gradient(160deg, #14452f 0%, #0d3122 55%, #082116 100%);
   }
   /* Thin concentric line art in the hero corners — architectural, not decorative noise */
   .hero-rings {
