@@ -52,7 +52,7 @@ export function CheckoutModal({
 
   return (
     <Modal open={isCheckoutOpen} onClose={closeCheckout}>
-      <div className="pt-8">
+      <div className="pt-7">
         <h2 className="text-xl font-extrabold text-brand-forest mb-1">
           أكّدي طلبك · دفع عند الاستلام
         </h2>
@@ -97,6 +97,7 @@ export function CheckoutModal({
             <input
               {...register("customer_name")}
               placeholder="مثال: لمى الفهد"
+              autoComplete="name"
               className="w-full border rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-brand-forest/30"
               dir="rtl"
             />
@@ -111,6 +112,8 @@ export function CheckoutModal({
               {...register("customer_phone")}
               placeholder="0512345678"
               type="tel"
+              inputMode="tel"
+              autoComplete="tel"
               className="w-full border rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-brand-forest/30"
               dir="ltr"
             />
@@ -122,7 +125,7 @@ export function CheckoutModal({
             )}
           </div>
 
-          <Button type="submit" fullWidth disabled={submitting} className="bg-brand-forest hover:bg-brand-forest-light text-lg">
+          <Button type="submit" fullWidth disabled={submitting} className="bg-brand-forest hover:bg-brand-forest-light text-base md:text-lg py-4">
             أكّدي — {total} ريال · دفع عند الاستلام
           </Button>
         </form>

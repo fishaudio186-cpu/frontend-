@@ -2,22 +2,22 @@
 
 export const PRODUCT_IMAGES = {
   /** Studio pack shot — box + bottle (trusted, branded) */
-  heroMain: "/product/pack-shot.png",
-  homeBanner: "/product/pack-shot.png",
-  packaging: "/product/pack-shot.png",
-  packShot: "/product/pack-shot.png",
+  heroMain: "/product/pack-shot.jpg",
+  homeBanner: "/product/pack-shot.jpg",
+  packaging: "/product/pack-shot.jpg",
+  packShot: "/product/pack-shot.jpg",
   /** Top-down 4 herbs + bottle flat lay */
-  ingredientsFlatlay: "/product/ingredients-flatlay.png",
+  ingredientsFlatlay: "/product/ingredients-flatlay.jpg",
   /** Legacy assets — keep paths but prefer new branded shots in UI */
   lifestyle: "/product/gallery-lifestyle.png",
   beforeAfterSplit: "/product/before-after-split.png",
   beforeAfterMacro: "/product/before-after-macro.png",
-  beforeAfterGrid: "/product/before-after-grid.png",
-  painSolution: "/product/pain-solution.png",
-  ingredientsScience: "/product/ingredients-science.png",
-  featuresVertical: "/product/features-vertical.png",
-  homeBannerLegacy: "/product/home-banner.png",
-  productBox: "/product/product-box.png",
+  beforeAfterGrid: "/product/before-after-grid.jpg",
+  painSolution: "/product/pain-solution.jpg",
+  ingredientsScience: "/product/ingredients-science.jpg",
+  featuresVertical: "/product/features-vertical.jpg",
+  homeBannerLegacy: "/product/home-banner.jpg",
+  productBox: "/product/product-box.jpg",
   ingGinger: "/product/ing-ginger.png",
   ingGinseng: "/product/ing-ginseng.png",
   ingGanoderma: "/product/ing-ganoderma.png",

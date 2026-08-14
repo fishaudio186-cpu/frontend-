@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 bg-brand-forest-dark/95 backdrop-blur-xl border-b border-brand-gold/15">
-      <div className="max-w-7xl mx-auto px-4 h-[76px] flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 h-16 md:h-[76px] flex items-center justify-between gap-4">
         <Logo tone="dark" />
 
         <nav className="hidden md:flex items-center gap-9 flex-1 justify-center">

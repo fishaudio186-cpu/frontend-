@@ -58,6 +58,7 @@ export function CartDrawer() {
                       src={PRODUCT_IMAGES.packShot}
                       alt={item.nameAr}
                       fill
+                      unoptimized
                       className="object-contain"
                       sizes="56px"
                     />
@@ -104,12 +105,12 @@ export function CartDrawer() {
           <div className="p-4 border-t bg-white mt-auto shrink-0">
             <div className="flex justify-between mb-1">
               <span className="font-medium">الإجمالي (دفع عند الاستلام):</span>
-              <span className="font-extrabold text-xl text-brand-forest">{total} ريال</span>
+              <span className="font-extrabold text-xl text-brand-berry">{total} ريال</span>
             </div>
             <p className="text-xs text-brand-ink/60 mb-3 flex items-center gap-1">
               <Phone className="w-3 h-3" /> خطوة واحدة وتخلصين · بنتصل للتأكيد ✓
             </p>
-            <Button fullWidth className="bg-brand-forest hover:bg-brand-forest-light" onClick={handleCheckout}>
+            <Button fullWidth className="bg-brand-forest hover:bg-brand-forest-light py-4" onClick={handleCheckout}>
               إتمام الطلب — {total} ريال
             </Button>
             <p className="text-[10px] text-center text-brand-ink/45 mt-2">

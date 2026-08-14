@@ -5,7 +5,7 @@ import { StoreImage } from "@/components/ui/StoreImage";
 
 export function IngredientsShowcase() {
   return (
-    <section className="py-20 bg-brand-cream">
+    <section className="py-14 md:py-20 bg-brand-cream">
       <div className="max-w-7xl mx-auto px-4">
         <SectionHeader
           eyebrow="Science · Ingredients"
@@ -17,7 +17,7 @@ export function IngredientsShowcase() {
           alt="تركيبة نور الشيب — الزنجبيل والجينسنغ والريشي والهوشو و"
           aspect="wide"
           objectFit="cover"
-          className="mb-10"
+          className="mb-7 md:mb-10"
         />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {INGREDIENT_IMAGES.map((ing) => (
@@ -30,11 +30,12 @@ export function IngredientsShowcase() {
                   src={ing.src}
                   alt={ing.nameAr}
                   fill
+                  unoptimized
                   sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-contain p-3 group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-4 text-center border-t border-brand-cream-dark">
+              <div className="p-3 md:p-4 text-center border-t border-brand-cream-dark">
                 <p className="font-extrabold text-brand-forest">{ing.nameAr}</p>
                 <p className="text-[10px] font-english text-brand-gold-deep mt-0.5 tracking-wide">
                   {ing.nameEn}

@@ -38,6 +38,7 @@ export function StoreImage({
         alt={alt}
         fill
         priority={priority}
+        unoptimized
         sizes="(max-width: 768px) 100vw, 50vw"
         className={objectFit === "contain" ? "object-contain" : "object-cover"}
         style={{ objectPosition }}

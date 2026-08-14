@@ -26,12 +26,14 @@ export function Modal({
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-0 md:p-4">
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
       <div
         className={cn(
-          "relative bg-white z-10 overflow-y-auto max-h-[90vh]",
-          fullScreenMobile ? "w-full h-full md:h-auto md:max-w-lg md:rounded-2xl p-6" : "rounded-2xl p-6 max-w-lg w-full",
+          "relative bg-white z-10 overflow-y-auto overscroll-contain",
+          fullScreenMobile
+            ? "w-full h-[100dvh] md:h-auto md:max-h-[90vh] md:max-w-lg md:rounded-2xl px-4 pt-4 pb-[calc(1rem+env(safe-area-inset-bottom))] md:p-6"
+            : "rounded-2xl p-6 max-h-[90vh] max-w-lg w-full",
           className
         )}
       >

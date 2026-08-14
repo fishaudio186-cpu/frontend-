@@ -18,12 +18,12 @@ export function TrustBadgeRow({
   const isDark = tone === "dark";
 
   return (
-    <div className={cn("grid grid-cols-2 sm:grid-cols-4 gap-2.5", className)}>
+    <div className={cn("grid grid-cols-4 gap-1.5 sm:gap-2.5", className)}>
       {BADGES.map((badge) => (
         <div
           key={badge.top}
           className={cn(
-            "rounded-xl border px-3 py-3 text-center transition-colors",
+            "rounded-lg sm:rounded-xl border px-1.5 sm:px-3 py-2 sm:py-3 text-center transition-colors",
             isDark
               ? "border-white/15 bg-white/[0.04] hover:border-brand-gold/50"
               : "border-brand-forest/12 bg-white hover:border-brand-gold/60"
@@ -31,7 +31,7 @@ export function TrustBadgeRow({
         >
           <p
             className={cn(
-              "font-english text-[13px] font-semibold tracking-[0.12em]",
+              "font-english text-[10px] sm:text-[13px] font-semibold tracking-[0.08em] sm:tracking-[0.12em]",
               isDark ? "text-brand-gold" : "text-brand-forest"
             )}
           >
@@ -39,7 +39,7 @@ export function TrustBadgeRow({
           </p>
           <p
             className={cn(
-              "mt-1 text-[10px] leading-tight",
+              "hidden sm:block mt-1 text-[10px] leading-tight",
               isDark ? "text-white/55" : "text-brand-ink/55"
             )}
           >

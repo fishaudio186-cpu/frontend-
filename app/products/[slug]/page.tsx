@@ -49,15 +49,15 @@ export default function ProductPage({
     <div className="pb-28">
       {/* Hero buy box */}
       <section className="atmosphere border-b border-brand-cream-dark">
-        <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
-          <nav className="text-sm text-brand-ink/60 mb-6">
+        <div className="max-w-7xl mx-auto px-4 py-5 md:py-12">
+          <nav className="hidden md:block text-sm text-brand-ink/60 mb-6">
             <Link href="/" className="hover:text-brand-forest">الرئيسية</Link>
             {" / "}
             <span className="text-brand-forest font-medium">{product.nameAr}</span>
           </nav>
 
           {/* Trust strip */}
-          <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-8">
+          <div className="flex overflow-x-auto md:flex-wrap justify-start gap-2 md:gap-3 mb-4 md:mb-8 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {[
               { icon: ShieldCheck, t: "مسجّل SFDA" },
               { icon: Phone, t: "تأكيد بالجوال" },
@@ -66,7 +66,7 @@ export default function ProductPage({
             ].map(({ icon: Icon, t }) => (
               <span
                 key={t}
-                className="inline-flex items-center gap-1.5 text-xs bg-white border border-brand-cream-dark px-3 py-1.5 rounded-full text-brand-forest font-medium shadow-sm"
+                className="inline-flex shrink-0 items-center gap-1.5 text-[11px] md:text-xs bg-white border border-brand-cream-dark px-2.5 md:px-3 py-1.5 rounded-full text-brand-forest font-medium shadow-sm"
               >
                 <Icon className="w-3.5 h-3.5 text-brand-gold" />
                 {t}
@@ -74,11 +74,11 @@ export default function ProductPage({
             ))}
           </div>
 
-          <StatPills pills={content.statPills} />
+          <StatPills pills={content.statPills} className="hidden md:grid" />
 
-          <div className="grid md:grid-cols-2 gap-10 lg:gap-14 mt-10 items-start">
-            {/* Gallery — empty placeholders */}
-            <div className="space-y-3 sticky top-24">
+          <div className="grid md:grid-cols-2 gap-7 md:gap-10 lg:gap-14 mt-4 md:mt-10 items-start">
+            {/* Product gallery */}
+            <div className="space-y-3 md:sticky md:top-24">
               <div className="relative">
                 <StoreImage
                   src={gallery[galleryIdx].src}
@@ -86,7 +86,7 @@ export default function ProductPage({
                   aspect="square"
                   objectFit={gallery[galleryIdx].fit ?? "cover"}
                   objectPosition={gallery[galleryIdx].objectPosition ?? "center"}
-                  className="rounded-3xl shadow-premium hero-plate border border-brand-forest/8"
+                  className="rounded-2xl md:rounded-3xl shadow-premium hero-plate border border-brand-forest/8"
                   priority
                 />
                 {product.badge && (
@@ -94,7 +94,7 @@ export default function ProductPage({
                     ⭐ {product.badge}
                   </span>
                 )}
-                <div className="absolute bottom-4 left-4 bg-white rounded-xl shadow-premium px-3 py-2 flex items-center gap-2 border">
+                <div className="absolute bottom-3 left-3 md:bottom-4 md:left-4 bg-white rounded-xl shadow-premium px-2.5 md:px-3 py-2 flex items-center gap-2 border">
                   <div className="w-8 h-8 rounded-full bg-brand-forest flex items-center justify-center text-brand-gold text-xs font-bold">
                     ✓
                   </div>
@@ -104,7 +104,7 @@ export default function ProductPage({
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 gap-2">
                 {gallery.map((item, i) => (
                   <button
                     key={item.src}
@@ -129,8 +129,8 @@ export default function ProductPage({
 
             {/* Buy box copy */}
             <div>
-              <p className="text-xs text-brand-gold-deep font-semibold tracking-wide">{product.routineLabel}</p>
-              <h1 className="text-2xl md:text-[2rem] font-extrabold leading-snug mt-2 text-brand-forest">
+              <p className="text-[11px] md:text-xs text-brand-gold-deep font-semibold tracking-wide">{product.routineLabel}</p>
+              <h1 className="text-[1.65rem] md:text-[2rem] font-extrabold leading-snug mt-2 text-brand-forest">
                 {product.cardTitleAr}
               </h1>
               <p className="mt-2 text-sm text-brand-forest/70 font-medium">{product.problemLineAr}</p>
@@ -197,14 +197,14 @@ export default function ProductPage({
       />
 
       {/* Sticky mobile CTA */}
-      <div className="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur border-t p-3 md:hidden z-30 shadow-lg">
+      <div className="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur border-t border-brand-forest/10 px-3 pt-2.5 pb-[calc(0.625rem+env(safe-area-inset-bottom))] md:hidden z-30 shadow-[0_-12px_35px_rgba(8,33,22,0.14)]">
         <div className="flex items-center gap-3">
           <div className="text-right flex-1 min-w-0">
             <p className="text-xs text-brand-ink/60 truncate">{product.nameAr} · {bundleQty}×</p>
-            <p className="font-extrabold text-brand-forest">{price} ر.س</p>
+            <p className="font-extrabold text-brand-berry">{price} ر.س</p>
           </div>
-          <Button className="flex-1 bg-brand-forest" onClick={handleAdd}>
-            {content.ctaVerb}
+          <Button className="flex-1 bg-brand-forest py-3.5" onClick={handleAdd}>
+            {content.ctaVerb} · دفع عند الاستلام
           </Button>
         </div>
       </div>

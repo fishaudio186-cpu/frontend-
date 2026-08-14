@@ -11,7 +11,7 @@ export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
       <span
         className={cn(
           "flex items-center justify-center shrink-0",
-          onDark && "rounded-2xl bg-brand-cream h-12 w-12 md:h-14 md:w-14 p-1.5 shadow-[0_6px_18px_rgba(8,33,22,0.35)]"
+          onDark && "rounded-2xl bg-brand-cream h-10 w-10 md:h-14 md:w-14 p-1 md:p-1.5 shadow-[0_6px_18px_rgba(8,33,22,0.35)]"
         )}
       >
         <Image
@@ -19,20 +19,21 @@ export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
           alt="نورالداخل — nurdakhil"
           width={160}
           height={160}
+          unoptimized
           className={cn("object-contain", onDark ? "h-full w-full" : "h-14 w-auto md:h-16")}
           priority
         />
       </span>
-      <div className="hidden sm:flex flex-col leading-tight">
+      <div className="flex flex-col leading-tight">
         <span
           className={cn(
-            "font-extrabold text-base md:text-lg",
+            "font-extrabold text-sm sm:text-base md:text-lg",
             onDark ? "text-white" : "text-brand-forest"
           )}
         >
           نورالداخل
         </span>
-        <span className="font-english text-brand-gold text-[10px] md:text-xs tracking-[0.22em] uppercase">
+        <span className="font-english text-brand-gold text-[9px] sm:text-[10px] md:text-xs tracking-[0.22em] uppercase">
           nurdakhil
         </span>
       </div>

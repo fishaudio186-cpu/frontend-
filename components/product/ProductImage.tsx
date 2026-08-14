@@ -32,6 +32,7 @@ export function ProductImage({
         src={src}
         alt="نور الشيب — بخاخ عشبي ضد الرمادي 100مل"
         fill
+        unoptimized
         sizes="(max-width: 768px) 100vw, 33vw"
         className={isPackshot ? "object-contain p-4" : "object-cover"}
       />

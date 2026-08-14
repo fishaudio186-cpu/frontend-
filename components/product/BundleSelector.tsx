@@ -71,13 +71,19 @@ export function BundleSelector({
   );
 }
 
-export function StatPills({ pills }: { pills: { value: string; label: string }[] }) {
+export function StatPills({
+  pills,
+  className,
+}: {
+  pills: { value: string; label: string }[];
+  className?: string;
+}) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div className={cn("grid grid-cols-4 gap-1.5 md:gap-3", className)}>
       {pills.map((p) => (
-        <div key={p.label} className="bg-white border rounded-xl p-3 text-center">
-          <p className="text-xl font-extrabold text-brand-forest">{p.value}</p>
-          <p className="text-xs text-brand-ink/60">{p.label}</p>
+        <div key={p.label} className="bg-white border border-brand-forest/10 rounded-lg md:rounded-xl px-1 py-2 md:p-3 text-center">
+          <p className="text-sm md:text-xl font-extrabold text-brand-forest">{p.value}</p>
+          <p className="text-[9px] md:text-xs leading-tight text-brand-ink/60">{p.label}</p>
         </div>
       ))}
     </div>

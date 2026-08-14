@@ -28,8 +28,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "نورالداخل | nurdakhil",
     description: "نور الشيب — بخاخ عشبي مرخّص SFDA ضد الرمادي",
-    images: [{ url: "/product/pack-shot.png", width: 1200, height: 630, alt: "نور الشيب — العلبة والبخاخ" }],
+    images: [{ url: "/product/pack-shot.jpg", width: 1200, height: 630, alt: "نور الشيب — العلبة والبخاخ" }],
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#0B2A1D",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

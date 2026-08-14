@@ -38,45 +38,45 @@ export default function HomePage() {
       {/* Signature hero — dark pharmacy stage, product plate first */}
       <section className="relative overflow-hidden hero-stage text-white">
         <div className="hero-rings" aria-hidden />
-        <div className="relative max-w-7xl mx-auto px-4 py-14 md:py-20">
-          <div className="grid md:grid-cols-12 gap-12 md:gap-14 items-center">
-            <div className="md:col-span-6 lg:col-span-5 order-1 md:order-2">
+        <div className="relative max-w-7xl mx-auto px-4 py-8 md:py-20">
+          <div className="grid md:grid-cols-12 gap-8 md:gap-14 items-center">
+            <div className="md:col-span-6 lg:col-span-5 order-2">
               <HeroShowcase />
             </div>
 
-            <div className="md:col-span-6 lg:col-span-7 order-2 md:order-1 animate-fade-up">
-              <span className="inline-flex items-center gap-2 rounded-full border border-brand-gold/35 px-4 py-1.5 text-[11px] md:text-xs text-brand-gold tracking-wide">
+            <div className="md:col-span-6 lg:col-span-7 order-1 animate-fade-up text-center md:text-right">
+              <span className="inline-flex items-center gap-2 rounded-full border border-brand-gold/35 bg-white/[0.04] px-3 py-1.5 text-[10px] md:text-xs text-brand-gold tracking-wide">
                 صيدلية الشعر السعودية · مرخّص SFDA
               </span>
 
-              <h1 className="mt-6 text-3xl md:text-5xl font-extrabold leading-[1.25] tracking-tight">
+              <h1 className="mt-4 md:mt-6 text-[1.75rem] md:text-5xl font-extrabold leading-[1.28] tracking-tight">
                 {content.heroHeadline}
               </h1>
 
-              <p className="mt-5 text-sm md:text-base text-white/65 leading-relaxed max-w-xl">
+              <p className="mt-3 md:mt-5 text-[13px] md:text-base text-white/72 leading-relaxed max-w-xl mx-auto md:mx-0">
                 بخاخ عشبي سريري بتركيبة الهوشو و، الجينسنغ، الزنجبيل، والريشي — يستهدف الرمادي من
                 جذوره. حلال 100%، مرخّص من هيئة الغذاء والدواء، وبدون صبغة كيماوية.
               </p>
 
-              <TrustBadgeRow className="mt-8 max-w-xl" />
+              <TrustBadgeRow className="mt-5 md:mt-8 max-w-xl mx-auto md:mx-0" />
 
-              <div className="flex flex-wrap items-center gap-4 mt-9">
-                <Link href={`/products/${HERO_SLUG}`}>
-                  <Button className="text-base px-9 py-4 bg-brand-gold text-brand-forest hover:bg-brand-gold-dark rounded-2xl font-extrabold shadow-[0_18px_45px_rgba(201,165,107,0.28)]">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4 mt-6 md:mt-9">
+                <Link href={`/products/${HERO_SLUG}`} className="w-full sm:w-auto">
+                  <Button fullWidth className="text-base px-9 py-4 bg-brand-gold text-brand-forest hover:bg-brand-gold-dark rounded-2xl font-extrabold shadow-[0_18px_45px_rgba(201,165,107,0.28)]">
                     ابدئي روتين نور الشيب
                   </Button>
                 </Link>
                 <Link
                   href={`/products/${HERO_SLUG}`}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-white/75 hover:text-brand-gold transition-colors"
+                  className="inline-flex items-center justify-center gap-2 py-1 text-sm font-semibold text-white/75 hover:text-brand-gold transition-colors"
                 >
                   تعرّفي على التركيبة
                   <ArrowLeft className="w-4 h-4" />
                 </Link>
               </div>
 
-              <p className="text-xs text-white/45 mt-7">
-                ضمان 30 يوم · شحن مجاني · دفع عند الاستلام
+              <p className="text-[11px] md:text-xs text-white/55 mt-4 md:mt-7">
+                ✓ ضمان 30 يوم · ✓ شحن مجاني · ✓ دفع عند الاستلام
               </p>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function HomePage() {
 
       <IngredientsShowcase />
 
-      <section className="py-20 md:py-28 atmosphere">
+      <section className="py-14 md:py-28 atmosphere">
         <div className="max-w-7xl mx-auto px-4">
           <SectionHeader
             eyebrow="Why Nurdakhil"
@@ -115,14 +115,14 @@ export default function HomePage() {
         reviews={content.reviews}
       />
 
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-14 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <SectionHeader
             eyebrow="How It Works"
             title="من الطلب إلى باب بيتك في 3 خطوات"
             subtitle="بدون دفع أونلاين. بدون التزام. بدون مخاطرة."
           />
-          <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-7 md:gap-10 max-w-5xl mx-auto">
             {[
               {
                 n: "01",
@@ -152,21 +152,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-24 bg-brand-forest text-white relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-brand-forest text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_70%_30%,#C9A56B,transparent_45%)]" />
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_80%,#1E6145,transparent_40%)]" />
         <div className="max-w-3xl mx-auto px-4 text-center relative animate-fade-in">
           <p className="font-english text-xs tracking-[0.3em] text-brand-gold uppercase mb-4">
             Begin Your Ritual
           </p>
-          <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
+          <h2 className="text-2xl md:text-5xl font-extrabold leading-tight">
             شعرك يستحق علماً، لا وعوداً فارغة
           </h2>
-          <p className="mt-5 opacity-85 text-base leading-relaxed max-w-xl mx-auto">
+          <p className="mt-4 md:mt-5 opacity-85 text-sm md:text-base leading-relaxed max-w-xl mx-auto">
             ابدئي روتين نور الشيب اليوم — دفع عند الاستلام، شحن مجاني، وضمان استرجاع 30 يوم.
           </p>
-          <Link href={`/products/${HERO_SLUG}`} className="inline-block mt-10">
-            <Button className="bg-brand-gold text-brand-forest hover:bg-brand-gold-dark text-lg px-12 py-4 font-extrabold rounded-2xl">
+          <Link href={`/products/${HERO_SLUG}`} className="inline-block mt-7 md:mt-10 w-full sm:w-auto">
+            <Button fullWidth className="bg-brand-gold text-brand-forest hover:bg-brand-gold-dark text-base md:text-lg px-12 py-4 font-extrabold rounded-2xl">
               ابدئي روتين نور الشيب
             </Button>
           </Link>
