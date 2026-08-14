@@ -34,9 +34,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable} ${outfit.variable}`} style={{ colorScheme: "light" }}>
+    <html lang="ar" dir="rtl" className={`${cairo.variable} ${outfit.variable}`} style={{ colorScheme: "only light" }}>
       <head>
-        <meta name="color-scheme" content="light only" />
+        <meta name="color-scheme" content="only light" />
       </head>
       <body className="font-arabic min-h-screen flex flex-col bg-brand-cream text-brand-ink">
         <AnalyticsProvider>

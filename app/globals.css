@@ -5,12 +5,18 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* The brand palette is fixed; opt out of browser dark-mode inversion. */
     color-scheme: only light;
   }
   body {
     @apply bg-brand-cream text-brand-ink font-arabic antialiased;
     background-color: #f6f3ef !important;
     color: #1a1214 !important;
+  }
+  input,
+  select,
+  textarea {
+    color-scheme: light;
   }
   ::selection {
     background: rgba(201, 165, 107, 0.35);
@@ -54,8 +60,9 @@
       radial-gradient(circle at 92% 6%, transparent 178px, rgba(255, 255, 255, 0.06) 179px, transparent 180px),
       radial-gradient(circle at 6% 96%, transparent 148px, rgba(201, 165, 107, 0.14) 149px, transparent 150px);
   }
+  /* Near-white so the studio pack shot blends into the plate without a visible seam */
   .hero-plate {
     background:
-      radial-gradient(circle at 50% 42%, #ffffff 0%, #faf7f3 52%, #efe7dd 100%);
+      radial-gradient(circle at 50% 45%, #ffffff 0%, #ffffff 62%, #f8f4ee 100%);
   }
 }
