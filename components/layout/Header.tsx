@@ -19,17 +19,16 @@ export function Header() {
   const openDrawer = useCartStore((s) => s.openDrawer);
 
   return (
-    <header className="sticky top-0 z-40 bg-white/98 backdrop-blur-md border-b border-brand-cream-dark shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 h-[72px] flex items-center justify-between gap-4">
-        {/* RTL: first = right — logo */}
+    <header className="sticky top-0 z-40 bg-[#FBF9F6]/90 backdrop-blur-xl border-b border-brand-plum/8">
+      <div className="max-w-7xl mx-auto px-4 h-[76px] flex items-center justify-between gap-4">
         <Logo />
 
-        <nav className="hidden md:flex items-center gap-8 flex-1 justify-center">
+        <nav className="hidden md:flex items-center gap-9 flex-1 justify-center">
           {NAV.map((n) => (
             <Link
               key={n.href}
               href={n.href}
-              className="text-sm font-medium text-[#4A4A4A] hover:text-brand-plum transition"
+              className="text-sm font-medium text-brand-ink/70 hover:text-brand-plum transition-colors tracking-wide"
             >
               {n.label}
             </Link>
@@ -39,7 +38,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <button
             onClick={openDrawer}
-            className="relative p-2.5 hover:bg-brand-cream rounded-full transition"
+            className="relative p-2.5 hover:bg-brand-stone rounded-full transition"
             aria-label={`السلة ${itemCount}`}
           >
             <ShoppingBag className="w-5 h-5 text-brand-plum" />
@@ -50,7 +49,7 @@ export function Header() {
             )}
           </button>
           <button
-            className="md:hidden p-2.5 hover:bg-brand-cream rounded-full"
+            className="md:hidden p-2.5 hover:bg-brand-stone rounded-full"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="القائمة"
           >
@@ -60,12 +59,12 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <nav className="md:hidden border-t bg-white px-4 py-4 flex flex-col gap-4">
+        <nav className="md:hidden border-t border-brand-plum/8 bg-[#FBF9F6] px-4 py-4 flex flex-col gap-1">
           {NAV.map((n) => (
             <Link
               key={n.href}
               href={n.href}
-              className="font-medium py-2 border-b border-brand-cream last:border-0"
+              className="font-medium py-3 border-b border-brand-plum/5 last:border-0 text-brand-ink"
               onClick={() => setMobileOpen(false)}
             >
               {n.label}

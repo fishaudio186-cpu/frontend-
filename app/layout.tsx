@@ -1,29 +1,23 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 import { CheckoutFlow } from "@/components/checkout/CheckoutFlow";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
-import { Tajawal, Inter, Playfair_Display } from "next/font/google";
+import { Cairo, Outfit } from "next/font/google";
 import "./globals.css";
 
-const tajawal = Tajawal({
-  subsets: ["arabic"],
-  weight: ["400", "500", "700", "800"],
-  variable: "--font-tajawal",
+const cairo = Cairo({
+  subsets: ["arabic", "latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-cairo",
 });
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-outfit",
 });
 
 export const metadata: Metadata = {
@@ -40,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar" dir="rtl" className={`${tajawal.variable} ${inter.variable} ${playfair.variable}`}>
+    <html lang="ar" dir="rtl" className={`${cairo.variable} ${outfit.variable}`}>
       <body className="font-arabic min-h-screen flex flex-col">
         <AnalyticsProvider>
           <AnnouncementBar />

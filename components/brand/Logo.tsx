@@ -14,7 +14,7 @@ export function Logo() {
       />
       <div className="hidden sm:flex flex-col leading-tight">
         <span className="font-extrabold text-brand-plum text-base md:text-lg">نورالداخل</span>
-        <span className="font-display text-brand-gold text-[10px] md:text-xs tracking-[0.2em] uppercase">
+        <span className="font-english text-brand-gold text-[10px] md:text-xs tracking-[0.22em] uppercase">
           nurdakhil
         </span>
       </div>

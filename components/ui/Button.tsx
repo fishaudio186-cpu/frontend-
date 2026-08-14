@@ -15,10 +15,10 @@ export function Button({
   return (
     <button
       className={cn(
-        "font-bold py-4 px-8 rounded-xl transition-all disabled:opacity-50",
-        variant === "primary" && "bg-brand-gold text-white hover:bg-brand-gold-dark shadow-md",
-        variant === "secondary" && "border-2 border-brand-plum text-brand-plum hover:bg-brand-plum hover:text-white",
-        variant === "ghost" && "text-[#6B6B6B] hover:text-brand-plum py-2",
+        "font-bold py-4 px-8 rounded-2xl transition-all duration-300 disabled:opacity-50",
+        variant === "primary" && "bg-brand-plum text-white hover:bg-brand-plum-light shadow-premium",
+        variant === "secondary" && "border border-brand-plum/25 text-brand-plum hover:bg-brand-plum hover:text-white",
+        variant === "ghost" && "text-brand-ink/55 hover:text-brand-plum py-2",
         fullWidth && "w-full",
         className
       )}
