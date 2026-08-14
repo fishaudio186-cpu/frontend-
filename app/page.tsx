@@ -6,6 +6,7 @@ import { FAQSection } from "@/components/sections/FAQSection";
 import { HeroShowcase } from "@/components/sections/HeroShowcase";
 import { FeaturedProduct } from "@/components/sections/FeaturedProduct";
 import { IngredientsShowcase } from "@/components/sections/IngredientsShowcase";
+import { TrustBadgeRow } from "@/components/ui/TrustBadgeRow";
 import { HERO_SLUG } from "@/lib/products";
 import { getProductContent } from "@/lib/product-content";
 import { ShieldCheck, Truck, RotateCcw, BadgeCheck, ArrowLeft } from "lucide-react";
@@ -34,47 +35,49 @@ const WHY_ITEMS = [
 export default function HomePage() {
   return (
     <>
-      {/* Full-bleed hero — brand first, one composition */}
-      <section className="relative overflow-hidden atmosphere border-b border-brand-plum/5">
-        <div className="max-w-7xl mx-auto px-4 pt-8 pb-14 md:pt-10 md:pb-0">
-          <div className="grid md:grid-cols-12 gap-8 md:gap-6 items-stretch min-h-[78vh] md:min-h-[86vh]">
-            <div className="md:col-span-5 flex flex-col justify-center order-2 md:order-1 py-4 md:py-16 animate-fade-up">
-              <p className="font-english text-[11px] md:text-xs tracking-[0.28em] uppercase text-brand-gold font-semibold mb-5">
-                Saudi Hair Pharmacy · SFDA
-              </p>
-              <p className="text-4xl md:text-6xl font-extrabold text-brand-plum leading-none tracking-tight">
-                نورالداخل
-              </p>
-              <p className="font-english text-brand-gold/90 text-sm md:text-base tracking-[0.35em] uppercase mt-2 mb-8">
-                nurdakhil
-              </p>
-              <h1 className="text-xl md:text-3xl font-bold text-brand-ink leading-[1.35] max-w-md">
+      {/* Signature hero — dark pharmacy stage, product plate first */}
+      <section className="relative overflow-hidden hero-stage text-white">
+        <div className="hero-rings" aria-hidden />
+        <div className="relative max-w-7xl mx-auto px-4 py-14 md:py-20">
+          <div className="grid md:grid-cols-12 gap-12 md:gap-14 items-center">
+            <div className="md:col-span-6 lg:col-span-5 order-1 md:order-2">
+              <HeroShowcase />
+            </div>
+
+            <div className="md:col-span-6 lg:col-span-7 order-2 md:order-1 animate-fade-up">
+              <span className="inline-flex items-center gap-2 rounded-full border border-brand-gold/35 px-4 py-1.5 text-[11px] md:text-xs text-brand-gold tracking-wide">
+                صيدلية الشعر السعودية · مرخّص SFDA
+              </span>
+
+              <h1 className="mt-6 text-3xl md:text-5xl font-extrabold leading-[1.25] tracking-tight">
                 {content.heroHeadline}
               </h1>
-              <p className="mt-5 text-sm md:text-base text-brand-ink/60 leading-relaxed max-w-md">
-                بخاخ عشبي سريري ضد الرمادي — حلال، مرخّص SFDA، وبدون صبغة كيماوية.
+
+              <p className="mt-5 text-sm md:text-base text-white/65 leading-relaxed max-w-xl">
+                بخاخ عشبي سريري بتركيبة الهوشو و، الجينسنغ، الزنجبيل، والريشي — يستهدف الرمادي من
+                جذوره. حلال 100%، مرخّص من هيئة الغذاء والدواء، وبدون صبغة كيماوية.
               </p>
+
+              <TrustBadgeRow className="mt-8 max-w-xl" />
+
               <div className="flex flex-wrap items-center gap-4 mt-9">
                 <Link href={`/products/${HERO_SLUG}`}>
-                  <Button className="text-base px-9 py-4 bg-brand-plum hover:bg-brand-plum-light rounded-2xl shadow-premium">
+                  <Button className="text-base px-9 py-4 bg-brand-gold text-brand-plum hover:bg-brand-gold-dark rounded-2xl font-extrabold shadow-[0_18px_45px_rgba(201,165,107,0.28)]">
                     ابدئي روتين نور الشيب
                   </Button>
                 </Link>
                 <Link
                   href={`/products/${HERO_SLUG}`}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-plum/80 hover:text-brand-plum transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-white/75 hover:text-brand-gold transition-colors"
                 >
                   تعرّفي على التركيبة
                   <ArrowLeft className="w-4 h-4" />
                 </Link>
               </div>
-              <p className="text-xs text-brand-ink/45 mt-6">
+
+              <p className="text-xs text-white/45 mt-7">
                 ضمان 30 يوم · شحن مجاني · دفع عند الاستلام
               </p>
-            </div>
-
-            <div className="md:col-span-7 order-1 md:order-2 relative -mx-4 md:mx-0 min-h-[440px] md:min-h-[86vh]">
-              <HeroShowcase />
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import { HERO_SLUG, getHeroProduct } from "@/lib/products";
 import { getProductContent } from "@/lib/product-content";
 import { PRODUCT_IMAGES } from "@/lib/product-images";
 import { SectionHeader } from "@/components/sections/SectionHeader";
+import { TrustBadgeRow } from "@/components/ui/TrustBadgeRow";
 
 export function FeaturedProduct() {
   const product = getHeroProduct();
@@ -20,7 +21,7 @@ export function FeaturedProduct() {
           subtitle="بخاخ نور الشيب — تركيبة عشبية مركّزة 100 مل ضد الشيب والرمادي."
         />
         <article className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <div className="relative aspect-square hero-plane overflow-hidden">
+          <div className="relative aspect-square hero-plate rounded-[2rem] border border-brand-plum/8 shadow-card overflow-hidden">
             <Image
               src={PRODUCT_IMAGES.packShot}
               alt={product.nameAr}
@@ -46,6 +47,7 @@ export function FeaturedProduct() {
               <span className="text-brand-ink/60 font-medium">ر.س</span>
             </div>
             <p className="text-xs text-brand-trust mt-2">2 بـ 279 · 3 بـ 349 · شحن مجاني</p>
+            <TrustBadgeRow tone="light" className="mt-7" />
             <Link href={`/products/${HERO_SLUG}`} className="mt-8">
               <Button className="bg-brand-plum hover:bg-brand-plum-light text-base py-4 px-10 rounded-2xl">
                 ابدئي روتين نور الشيب

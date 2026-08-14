@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
-export function Logo() {
+export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
+  const onDark = tone === "dark";
+
   return (
     <Link href="/" className="flex items-center gap-2.5 shrink-0">
       <Image
@@ -13,7 +16,14 @@ export function Logo() {
         priority
       />
       <div className="hidden sm:flex flex-col leading-tight">
-        <span className="font-extrabold text-brand-plum text-base md:text-lg">نورالداخل</span>
+        <span
+          className={cn(
+            "font-extrabold text-base md:text-lg",
+            onDark ? "text-white" : "text-brand-plum"
+          )}
+        >
+          نورالداخل
+        </span>
         <span className="font-english text-brand-gold text-[10px] md:text-xs tracking-[0.22em] uppercase">
           nurdakhil
         </span>

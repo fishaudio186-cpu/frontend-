@@ -48,7 +48,7 @@ export default function ProductPage({
   return (
     <div className="pb-28">
       {/* Hero buy box */}
-      <section className="bg-gradient-to-b from-brand-cream to-white border-b border-brand-cream-dark">
+      <section className="atmosphere border-b border-brand-cream-dark">
         <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
           <nav className="text-sm text-[#6B6B6B] mb-6">
             <Link href="/" className="hover:text-brand-plum">الرئيسية</Link>
@@ -86,7 +86,7 @@ export default function ProductPage({
                   aspect="square"
                   objectFit={gallery[galleryIdx].fit ?? "cover"}
                   objectPosition={gallery[galleryIdx].objectPosition ?? "center"}
-                  className="rounded-3xl shadow-premium bg-white"
+                  className="rounded-3xl shadow-premium hero-plate border border-brand-plum/8"
                   priority
                 />
                 {product.badge && (

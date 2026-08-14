@@ -37,4 +37,25 @@
       radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.92), rgba(246, 243, 239, 0.55) 55%, transparent 75%),
       linear-gradient(135deg, #f8f4ef 0%, #efe6dc 100%);
   }
+  .hero-stage {
+    background:
+      radial-gradient(ellipse 70% 55% at 78% 12%, rgba(201, 165, 107, 0.16), transparent 58%),
+      radial-gradient(ellipse 60% 50% at 10% 88%, rgba(107, 31, 58, 0.5), transparent 55%),
+      linear-gradient(160deg, #2e0c18 0%, #1b0a12 55%, #14070d 100%);
+  }
+  /* Thin concentric line art in the hero corners — architectural, not decorative noise */
+  .hero-rings {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image:
+      radial-gradient(circle at 92% 6%, transparent 118px, rgba(255, 255, 255, 0.08) 119px, transparent 120px),
+      radial-gradient(circle at 92% 6%, transparent 178px, rgba(255, 255, 255, 0.06) 179px, transparent 180px),
+      radial-gradient(circle at 6% 96%, transparent 148px, rgba(201, 165, 107, 0.14) 149px, transparent 150px);
+  }
+  .hero-plate {
+    background:
+      radial-gradient(circle at 50% 42%, #ffffff 0%, #faf7f3 52%, #efe7dd 100%);
+  }
 }
