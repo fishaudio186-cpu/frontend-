@@ -5,9 +5,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    color-scheme: only light;
   }
   body {
     @apply bg-brand-cream text-brand-ink font-arabic antialiased;
+    background-color: #f6f3ef !important;
+    color: #1a1214 !important;
   }
   ::selection {
     background: rgba(201, 165, 107, 0.35);
