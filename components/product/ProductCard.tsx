@@ -23,7 +23,7 @@ export function ProductCard({ product }: { product: Product }) {
         <StarRating rating={product.rating} count={product.reviewCount} className="mt-4" />
         <div className="mt-4 flex items-baseline gap-2">
           <span className="text-xs text-brand-ink/60">يبدأ من</span>
-          <span className="font-extrabold text-xl text-brand-forest">199 ر.س</span>
+          <span className="font-extrabold text-xl text-brand-berry">199 ر.س</span>
         </div>
         <p className="text-xs text-brand-trust mt-1">2 بـ 279 · 3 بـ 349 · COD</p>
         <Link href={`/products/${product.slug}`} className="mt-5">
@@ -49,7 +49,7 @@ export function ProductCardCompact({
       <div className="flex-1 min-w-0">
         <p className="font-bold text-sm truncate">{product.nameAr}</p>
         <p className="text-xs text-brand-ink/60 truncate">{product.problemLineAr}</p>
-        <p className="text-sm text-brand-forest font-bold mt-1">199 ريال</p>
+        <p className="text-sm text-brand-berry font-bold mt-1">199 ريال</p>
       </div>
       <Button variant="secondary" className="py-2 px-3 text-sm shrink-0 self-center" onClick={onAdd}>
         + أضيفي

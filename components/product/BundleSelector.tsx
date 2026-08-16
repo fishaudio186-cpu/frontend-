@@ -13,61 +13,67 @@ export function BundleSelector({
   labels?: { 1: string; 2: string; 3: string };
 }) {
   return (
-    <div className="space-y-3">
-      <p className="font-bold text-brand-forest">اختاري العرض:</p>
-      {BUNDLE_OPTIONS.map((opt) => (
-        <label
-          key={opt.qty}
-          className={cn(
-            "block p-4 rounded-xl border-2 cursor-pointer transition",
-            selected === opt.qty
-              ? "border-brand-forest bg-brand-forest/5 shadow-md"
-              : "border-brand-forest/12 hover:border-brand-forest/30 bg-white"
-          )}
-        >
-          <div className="flex items-start gap-3">
+    <fieldset>
+      <legend className="font-bold text-brand-forest mb-3">اختاري العرض</legend>
+      <div className="grid grid-cols-3 gap-2 md:grid-cols-1 md:gap-3">
+        {BUNDLE_OPTIONS.map((opt) => (
+          <label
+            key={opt.qty}
+            className={cn(
+              "relative flex min-h-[108px] cursor-pointer flex-col items-center justify-center rounded-2xl border-2 bg-white px-2 py-3 text-center transition md:block md:min-h-0 md:p-4 md:text-right",
+              selected === opt.qty
+                ? "border-brand-forest bg-brand-forest/[0.04] shadow-md"
+                : "border-brand-forest/12 hover:border-brand-forest/30"
+            )}
+          >
+            {"popular" in opt && opt.popular && (
+              <span className="absolute -top-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand-gold px-2 py-0.5 text-[9px] font-bold text-brand-forest-dark md:static md:mb-1 md:inline-block md:translate-x-0 md:text-xs">
+                أفضل قيمة
+              </span>
+            )}
             <input
               type="radio"
               name="bundle"
               checked={selected === opt.qty}
               onChange={() => onChange(opt.qty)}
-              className="accent-brand-forest w-5 h-5 mt-1"
+              className="sr-only"
             />
-            <div className="flex-1">
-              {labels && (
-                <p className="text-xs text-brand-trust font-medium mb-1">
-                  {labels[opt.qty as 1 | 2 | 3]}
+            <div className="md:flex md:items-start md:gap-3">
+              <span
+                aria-hidden
+                className={cn(
+                  "hidden md:mt-1 md:flex md:h-5 md:w-5 md:shrink-0 md:items-center md:justify-center md:rounded-full md:border-2",
+                  selected === opt.qty ? "md:border-brand-forest" : "md:border-brand-forest/25"
+                )}
+              >
+                {selected === opt.qty && <span className="h-2.5 w-2.5 rounded-full bg-brand-forest" />}
+              </span>
+              <div className="md:flex-1">
+                {labels && (
+                  <p className="hidden text-xs text-brand-trust font-medium mb-1 md:block">
+                    {labels[opt.qty as 1 | 2 | 3]}
+                  </p>
+                )}
+                <p className="text-xs font-bold text-brand-forest md:text-base">{opt.label}</p>
+                <p className="mt-1 text-lg font-extrabold text-brand-berry md:text-xl">
+                  {opt.price} <span className="text-[10px] md:text-sm">ر.س</span>
                 </p>
-              )}
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="font-bold">{opt.label}</span>
-                {"popular" in opt && opt.popular && (
-                  <span className="text-xs bg-brand-gold text-white px-2 py-0.5 rounded-full">
-                    الأكثر اختياراً
-                  </span>
-                )}
-                {opt.qty === 3 && (
-                  <span className="text-xs bg-brand-trust/15 text-brand-trust px-2 py-0.5 rounded-full">
-                    الأكثر توفيراً
-                  </span>
-                )}
-              </div>
-              <p className="text-sm text-brand-ink/60 mt-1">
-                {opt.qty === 1 && "قطعة واحدة · شهر كامل"}
-                {opt.qty === 2 && "قطعتان · ثبّتي النتيجة"}
-                {opt.qty === 3 && "3 قطع · روتين كامل"}
-              </p>
-              <div className="flex items-baseline gap-2 mt-2">
-                <span className="text-xl font-extrabold text-brand-berry">{opt.price} ر.س</span>
                 {opt.savings > 0 && (
-                  <span className="text-sm text-brand-trust">وفّري {opt.savings} ريال</span>
+                  <p className="mt-1 text-[10px] font-bold text-brand-trust md:text-sm">
+                    وفّري {opt.savings} ريال
+                  </p>
                 )}
+                <p className="hidden text-sm text-brand-ink/60 mt-1 md:block">
+                  {opt.qty === 1 && "قطعة واحدة · شهر كامل"}
+                  {opt.qty === 2 && "قطعتان · ثبّتي النتيجة"}
+                  {opt.qty === 3 && "3 قطع · روتين كامل"}
+                </p>
               </div>
             </div>
-          </div>
-        </label>
-      ))}
-    </div>
+          </label>
+        ))}
+      </div>
+    </fieldset>
   );
 }
 

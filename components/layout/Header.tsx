@@ -114,7 +114,7 @@ export function Header() {
 
             <Link
               href={PRODUCT_HREF}
-              className="hidden md:inline-flex items-center gap-2 bg-brand-gold text-brand-forest-dark text-[13px] font-bold px-5 py-2.5 rounded-full hover:bg-brand-gold-soft transition-colors shadow-[0_10px_24px_-12px_rgba(201,165,107,0.9)]"
+              className="hidden md:inline-flex items-center gap-2 bg-brand-gold text-brand-forest-dark text-[13px] font-bold px-5 py-2.5 rounded-full hover:bg-brand-gold-soft transition-colors shadow-[0_10px_24px_-12px_rgba(208,173,114,0.9)]"
             >
               اطلبي الآن
             </Link>

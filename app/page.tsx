@@ -62,7 +62,7 @@ export default function HomePage() {
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-4 mt-6 md:mt-9">
                 <Link href={`/products/${HERO_SLUG}`} className="w-full sm:w-auto">
-                  <Button fullWidth className="text-base px-9 py-4 bg-brand-gold text-brand-forest hover:bg-brand-gold-dark rounded-2xl font-extrabold shadow-[0_18px_45px_rgba(201,165,107,0.28)]">
+                  <Button fullWidth className="text-base px-9 py-4 bg-brand-gold text-brand-forest-dark hover:bg-brand-gold-soft rounded-2xl font-extrabold shadow-[0_18px_45px_rgba(208,173,114,0.3)]">
                     ابدئي روتين نور الشيب
                   </Button>
                 </Link>
@@ -153,8 +153,8 @@ export default function HomePage() {
       </section>
 
       <section className="py-16 md:py-24 bg-brand-forest text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_70%_30%,#C9A56B,transparent_45%)]" />
-        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_80%,#1E6145,transparent_40%)]" />
+        <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_70%_30%,#D0AD72,transparent_45%)]" />
+        <div className="absolute inset-0 opacity-25 bg-[radial-gradient(circle_at_20%_80%,#861F42,transparent_40%)]" />
         <div className="max-w-3xl mx-auto px-4 text-center relative animate-fade-in">
           <p className="font-english text-xs tracking-[0.3em] text-brand-gold uppercase mb-4">
             Begin Your Ritual
@@ -166,7 +166,7 @@ export default function HomePage() {
             ابدئي روتين نور الشيب اليوم — دفع عند الاستلام، شحن مجاني، وضمان استرجاع 30 يوم.
           </p>
           <Link href={`/products/${HERO_SLUG}`} className="inline-block mt-7 md:mt-10 w-full sm:w-auto">
-            <Button fullWidth className="bg-brand-gold text-brand-forest hover:bg-brand-gold-dark text-base md:text-lg px-12 py-4 font-extrabold rounded-2xl">
+            <Button fullWidth className="bg-brand-gold text-brand-forest-dark hover:bg-brand-gold-soft text-base md:text-lg px-12 py-4 font-extrabold rounded-2xl">
               ابدئي روتين نور الشيب
             </Button>
           </Link>
@@ -188,7 +188,7 @@ export default function HomePage() {
             { icon: ShieldCheck, t: "مرخّص · حلال", d: "تركيبة عشبية معتمدة" },
           ].map(({ icon: Icon, t, d }) => (
             <div key={t} className="text-center">
-              <Icon className="w-7 h-7 text-brand-forest mx-auto mb-3" strokeWidth={1.5} />
+              <Icon className="w-7 h-7 text-brand-trust mx-auto mb-3" strokeWidth={1.5} />
               <p className="font-bold text-sm text-brand-forest">{t}</p>
               <p className="text-xs text-brand-ink/50 mt-1">{d}</p>
             </div>

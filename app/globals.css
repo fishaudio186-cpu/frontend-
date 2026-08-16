@@ -10,8 +10,8 @@
   }
   body {
     @apply bg-brand-cream text-brand-ink font-arabic antialiased;
-    background-color: #fbf8f2 !important;
-    color: #15211b !important;
+    background-color: #fbf8f3 !important;
+    color: #281a1f !important;
   }
   input,
   select,
@@ -19,7 +19,7 @@
     color-scheme: light;
   }
   ::selection {
-    background: rgba(201, 165, 107, 0.35);
+    background: rgba(208, 173, 114, 0.38);
   }
 }
 
@@ -34,20 +34,20 @@
   }
   .atmosphere {
     background:
-      radial-gradient(ellipse 80% 60% at 15% 20%, rgba(201, 165, 107, 0.16), transparent 55%),
-      radial-gradient(ellipse 70% 50% at 90% 10%, rgba(20, 69, 47, 0.08), transparent 50%),
-      linear-gradient(180deg, #fdfbf7 0%, #f7f2e8 55%, #f1eade 100%);
+      radial-gradient(ellipse 80% 60% at 15% 20%, rgba(208, 173, 114, 0.14), transparent 55%),
+      radial-gradient(ellipse 70% 50% at 90% 10%, rgba(88, 21, 44, 0.07), transparent 50%),
+      linear-gradient(180deg, #fffdfa 0%, #f9f4ed 55%, #efe7dc 100%);
   }
   .hero-plane {
     background:
-      radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.94), rgba(251, 248, 242, 0.55) 55%, transparent 75%),
-      linear-gradient(135deg, #fdfbf7 0%, #f1eade 100%);
+      radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.96), rgba(251, 248, 243, 0.58) 55%, transparent 75%),
+      linear-gradient(135deg, #fffdfa 0%, #efe7dc 100%);
   }
   .hero-stage {
     background:
-      radial-gradient(ellipse 70% 55% at 78% 12%, rgba(201, 165, 107, 0.2), transparent 58%),
-      radial-gradient(ellipse 60% 50% at 10% 88%, rgba(30, 97, 69, 0.55), transparent 55%),
-      linear-gradient(160deg, #14452f 0%, #0d3122 55%, #082116 100%);
+      radial-gradient(ellipse 70% 55% at 78% 12%, rgba(208, 173, 114, 0.22), transparent 58%),
+      radial-gradient(ellipse 60% 50% at 10% 88%, rgba(116, 33, 63, 0.62), transparent 55%),
+      linear-gradient(160deg, #58152c 0%, #461022 55%, #350a19 100%);
   }
   /* Thin concentric line art in the hero corners — architectural, not decorative noise */
   .hero-rings {
@@ -58,11 +58,11 @@
     background-image:
       radial-gradient(circle at 92% 6%, transparent 118px, rgba(255, 255, 255, 0.08) 119px, transparent 120px),
       radial-gradient(circle at 92% 6%, transparent 178px, rgba(255, 255, 255, 0.06) 179px, transparent 180px),
-      radial-gradient(circle at 6% 96%, transparent 148px, rgba(201, 165, 107, 0.14) 149px, transparent 150px);
+      radial-gradient(circle at 6% 96%, transparent 148px, rgba(208, 173, 114, 0.16) 149px, transparent 150px);
   }
   /* Near-white so the studio pack shot blends into the plate without a visible seam */
   .hero-plate {
     background:
-      radial-gradient(circle at 50% 45%, #ffffff 0%, #ffffff 62%, #f8f4ee 100%);
+      radial-gradient(circle at 50% 45%, #ffffff 0%, #ffffff 62%, #faf6f0 100%);
   }
 }

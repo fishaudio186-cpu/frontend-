@@ -39,7 +39,6 @@ const HERO_PRODUCT: Product = {
   rating: 4.9,
   reviewCount: 487,
   stockCount: 19,
-  badge: "الأكثر مبيعاً",
   color: "#5C2033",
   productType: "spray",
 };
